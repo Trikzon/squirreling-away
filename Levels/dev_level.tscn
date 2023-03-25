@@ -7,15 +7,14 @@ albedo_color = Color(0.291886, 0.331853, 0.396783, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_u2l5y"]
 material = SubResource("StandardMaterial3D_ne04s")
-size = Vector2(10, 10)
+size = Vector2(50, 25)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i3ib5"]
-size = Vector3(10, 1, 10)
+size = Vector3(50, 1, 25)
 
 [node name="DevLevel" type="Node3D"]
 
 [node name="Ground" type="StaticBody3D" parent="."]
-transform = Transform3D(17.4851, 0, 0, 0, 1, 0, 0, 0, 3.17262, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 mesh = SubResource("PlaneMesh_u2l5y")
