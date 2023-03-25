@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://bh8wfmicbf2ly"]
+
+[ext_resource type="PackedScene" uid="uid://dw6xi0blh5idb" path="res://Entities/Player/hamster_walk_2.glb" id="1_g3i41"]
+[ext_resource type="Script" path="res://Entities/Player/hamster.gd" id="2_ra5t8"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vrqv7"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pou41"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_xnawc"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_kenmi"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_pou41")
+nodes/Animation/position = Vector2(173.333, 200)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_xnawc")
+nodes/TimeScale/position = Vector2(320, 173.333)
+nodes/output/position = Vector2(480, 160)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uw7mc"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0s1i6"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8xy6o"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nh254"]
+states/Start/position = Vector2(152, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_vrqv7")
+states/idle/position = Vector2(458.667, 115.333)
+states/walk/node = SubResource("AnimationNodeBlendTree_kenmi")
+states/walk/position = Vector2(657.111, 182.667)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_uw7mc"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_0s1i6"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_8xy6o")]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_lmf8g"]
+
+[node name="hamster_walk_2" instance=ExtResource("1_g3i41")]
+script = ExtResource("2_ra5t8")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/rotation = Quaternion(0.0670222, 0.536411, 0.114108, 0.833517)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(-0.00239378, 0.0660255, 0.162785, 0.984447)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(0.419487, -0.0718889, -0.463016, 0.777483)
+bones/6/rotation = Quaternion(0.490546, 0.000426777, 0.234921, 0.839152)
+bones/7/rotation = Quaternion(0.0617058, 0.00297669, 0.0356746, 0.997452)
+bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
+bones/10/rotation = Quaternion(-0.403566, -0.24723, -0.379148, 0.795147)
+bones/11/rotation = Quaternion(-0.0813467, -0.000239685, -0.0330587, 0.996137)
+bones/13/position = Vector3(-0.830451, -0.477244, -0.0827408)
+bones/13/rotation = Quaternion(0.379298, -0.0124702, 0.921156, -0.0863061)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/rotation = Quaternion(0.576533, 0.385216, -0.564793, 0.447468)
+bones/15/position = Vector3(0.775108, -0.454197, 0.63763)
+bones/15/rotation = Quaternion(-0.411877, -0.0707257, 0.908208, 0.0226441)
+bones/16/rotation = Quaternion(0.678195, -0.120342, 0.424293, 0.58783)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_nh254")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_lmf8g")
+parameters/conditions/idle = false
+parameters/conditions/walk = false
+parameters/walk/TimeScale/scale = 5.0
