@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=3 uid="uid://ca5qben5dryql"]
+
+[ext_resource type="Script" path="res://mode.gd" id="1_0a8aj"]
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_gdxao"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a3fms"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6cifg"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_meokg"]
+radius = 0.489556
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4tdsg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xssde"]
+size = Vector3(5, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6cvyn"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_odfa5"]
+material = SubResource("StandardMaterial3D_6cvyn")
+size = Vector3(5, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w2usl"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r27iq"]
+size = Vector3(1, 2, 1)
+
+[node name="Mode" type="Node"]
+script = ExtResource("1_0a8aj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_a3fms")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_6cifg")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37114, 0)
+script = ExtResource("1_gdxao")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99641, 0)
+shape = SubResource("CapsuleShape3D_meokg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.964052, 0)
+mesh = SubResource("CapsuleMesh_4tdsg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0804599, 0.996758, 0, -0.996758, 0.0804599, 0, 14.3198, 0)
+light_energy = 0.25
+sky_mode = 1
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5.358, 7.56435)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.14413, 0.0307697, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_xssde")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+mesh = SubResource("BoxMesh_odfa5")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15506, 1.04067, 0)
+shape = SubResource("BoxShape3D_w2usl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.155, 1.041, 0)
+mesh = SubResource("BoxMesh_r27iq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="DangerAlmostHere" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.703304, 10.7723, -0.548453)
+light_energy = 0.75
+
+[node name="DangerHere" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.703304, 10.7723, -0.548453)
+
+[node name="DeathTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D" to="CharacterBody3D" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="body_exited" from="Area3D" to="CharacterBody3D" method="_on_area_3d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
