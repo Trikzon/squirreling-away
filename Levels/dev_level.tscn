@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh131xjgippe2"]
+[gd_scene load_steps=7 format=3 uid="uid://bh131xjgippe2"]
 
 [ext_resource type="PackedScene" uid="uid://bsq6kupgh27i2" path="res://Entities/Player/player.tscn" id="1_mkk37"]
 [ext_resource type="PackedScene" uid="uid://k3h0mwi0l7yc" path="res://Entities/StaticProp/StaticProp.tscn" id="2_imjrj"]
+[ext_resource type="PackedScene" uid="uid://6t75rxue57su" path="res://Entities/Pushable/pushable.tscn" id="3_xrncy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne04s"]
 albedo_color = Color(0.291886, 0.331853, 0.396783, 1)
@@ -16,6 +17,7 @@ size = Vector3(50, 1, 25)
 [node name="DevLevel" type="Node3D"]
 
 [node name="Ground" type="StaticBody3D" parent="."]
+collision_mask = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 mesh = SubResource("PlaneMesh_u2l5y")
@@ -49,3 +51,6 @@ transform = Transform3D(2.68849, 0, 0, 0, 2.55942, 0, 0, 0, 2.55702, -5.69441, 0
 
 [node name="StaticProp2" parent="." instance=ExtResource("2_imjrj")]
 transform = Transform3D(7.22799, 0, 0, 0, 6.55062, 0, 0, 0, 6.53834, 9.14736, -1.09289, 5.61121)
+
+[node name="Pushable" parent="." instance=ExtResource("3_xrncy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76986, 1.6926, 0)

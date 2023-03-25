@@ -8,12 +8,18 @@
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_yxgu3"]
 
 [node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_pbpva")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_s5s3r")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="PushRayCast" type="RayCast3D" parent="."]
+target_position = Vector3(2.08165e-12, 2.08165e-12, 1)
+collision_mask = 4
 
 [node name="hamster_walk_2" parent="." instance=ExtResource("2_gpqi1")]
 transform = Transform3D(-1.35942e-08, 0, 0.311, 0, 0.311, 0, -0.311, 0, -1.35942e-08, 0, -0.972, 0)
@@ -23,13 +29,15 @@ bones/1/rotation = Quaternion(0.0392825, 0.5398, 0.133274, 0.830248)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/rotation = Quaternion(-0.0324919, 0.0798454, 0.161797, 0.983052)
 bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(0.419487, -0.0718889, -0.463016, 0.777483)
+bones/4/rotation = Quaternion(-0.093291, 0.329141, -0.627004, 0.699878)
 bones/6/rotation = Quaternion(0.487745, -0.0497891, 0.278966, 0.825714)
 bones/7/rotation = Quaternion(0.0821543, -0.0351516, 0.202709, 0.975153)
 bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
 bones/9/scale = Vector3(1, 1, 1)
 bones/10/rotation = Quaternion(-0.22081, -0.388673, -0.439356, 0.779194)
 bones/11/rotation = Quaternion(-0.294444, 0.00483959, 0.160354, 0.942107)
-bones/12/rotation = Quaternion(-0.132802, -0.0154302, -0.0720366, 0.988401)
+bones/12/rotation = Quaternion(-0.132802, -0.0154302, -0.0720365, 0.988401)
 bones/13/position = Vector3(-1.13902, -0.0938408, 0.560497)
 bones/13/rotation = Quaternion(0.392761, 0.188328, 0.886778, 0.154586)
 bones/13/scale = Vector3(1.18279, 1.18279, 1.18279)
