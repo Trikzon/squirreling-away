@@ -15,6 +15,7 @@ size = Vector3(10, 1, 10)
 [node name="DevLevel" type="Node3D"]
 
 [node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(17.4851, 0, 0, 0, 1, 0, 0, 0, 3.17262, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 mesh = SubResource("PlaneMesh_u2l5y")
