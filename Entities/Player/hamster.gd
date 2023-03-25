@@ -6,7 +6,7 @@ extends Node3D
 func _ready():
 	
 	var anim_player = $AnimationPlayer
-	var animations = ['idle', 'walk']
+	var animations = ['idle', 'walk','push','push_idle']
 	
 	
 	for animation in animations:

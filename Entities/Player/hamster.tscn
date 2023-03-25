@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bh8wfmicbf2ly"]
+[gd_scene load_steps=20 format=3 uid="uid://bh8wfmicbf2ly"]
 
 [ext_resource type="PackedScene" uid="uid://dw6xi0blh5idb" path="res://Entities/Player/hamster_walk_2.glb" id="1_g3i41"]
 [ext_resource type="Script" path="res://Entities/Player/hamster.gd" id="2_ra5t8"]
@@ -39,6 +39,30 @@ xfade_time = 0.1
 advance_mode = 2
 advance_condition = &"idle"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pibrq"]
+advance_mode = 2
+advance_condition = &"pushing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1nxaq"]
+advance_mode = 2
+advance_condition = &"pushing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nvj16"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ey32t"]
+advance_mode = 2
+advance_condition = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3mw14"]
+advance_mode = 2
+advance_condition = &"not_pushing"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ufnwh"]
+advance_mode = 2
+advance_condition = &"not_pushing"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nh254"]
 states/End/position = Vector2(1159.33, 114.889)
 states/Start/position = Vector2(152, 100)
@@ -50,11 +74,11 @@ states/push_idle/node = SubResource("AnimationNodeAnimation_we428")
 states/push_idle/position = Vector2(657.407, 38.6667)
 states/walk/node = SubResource("AnimationNodeBlendTree_kenmi")
 states/walk/position = Vector2(658.444, 233.334)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_uw7mc"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_0s1i6"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_8xy6o")]
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_uw7mc"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_0s1i6"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_8xy6o"), "idle", "push_idle", SubResource("AnimationNodeStateMachineTransition_pibrq"), "walk", "push", SubResource("AnimationNodeStateMachineTransition_1nxaq"), "push", "push_idle", SubResource("AnimationNodeStateMachineTransition_nvj16"), "push_idle", "push", SubResource("AnimationNodeStateMachineTransition_ey32t"), "push_idle", "idle", SubResource("AnimationNodeStateMachineTransition_3mw14"), "push", "walk", SubResource("AnimationNodeStateMachineTransition_ufnwh")]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_vtmaf"]
 
-[node name="hamster_walk_2" instance=ExtResource("1_g3i41")]
+[node name="hamster" instance=ExtResource("1_g3i41")]
 script = ExtResource("2_ra5t8")
 
 [node name="Skeleton3D" parent="Armature" index="0"]
@@ -85,5 +109,7 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_vtmaf")
 parameters/conditions/idle = false
+parameters/conditions/not_pushing = false
+parameters/conditions/pushing = false
 parameters/conditions/walk = false
 parameters/walk/TimeScale/scale = 5.0
