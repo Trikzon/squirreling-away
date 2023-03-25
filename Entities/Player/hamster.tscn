@@ -21,8 +21,8 @@ animation = &"walk"
 nodes/Animation/node = SubResource("AnimationNodeAnimation_pou41")
 nodes/Animation/position = Vector2(173.333, 200)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_xnawc")
-nodes/TimeScale/position = Vector2(320, 173.333)
-nodes/output/position = Vector2(480, 160)
+nodes/TimeScale/position = Vector2(350, 170)
+nodes/output/position = Vector2(510, 180)
 node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uw7mc"]
@@ -71,9 +71,9 @@ states/idle/position = Vector2(458.667, 115.333)
 states/push/node = SubResource("AnimationNodeAnimation_pdj70")
 states/push/position = Vector2(917.333, 140.667)
 states/push_idle/node = SubResource("AnimationNodeAnimation_we428")
-states/push_idle/position = Vector2(657.407, 38.6667)
+states/push_idle/position = Vector2(657.925, 38.1667)
 states/walk/node = SubResource("AnimationNodeBlendTree_kenmi")
-states/walk/position = Vector2(658.444, 233.334)
+states/walk/position = Vector2(658.185, 233.334)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_uw7mc"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_0s1i6"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_8xy6o"), "idle", "push_idle", SubResource("AnimationNodeStateMachineTransition_pibrq"), "walk", "push", SubResource("AnimationNodeStateMachineTransition_1nxaq"), "push", "push_idle", SubResource("AnimationNodeStateMachineTransition_nvj16"), "push_idle", "push", SubResource("AnimationNodeStateMachineTransition_ey32t"), "push_idle", "idle", SubResource("AnimationNodeStateMachineTransition_3mw14"), "push", "walk", SubResource("AnimationNodeStateMachineTransition_ufnwh")]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_vtmaf"]
