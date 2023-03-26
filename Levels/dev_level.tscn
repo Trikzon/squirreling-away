@@ -66,6 +66,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76986, 1.6926, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2301, 0.122012, 0)
 
 [node name="squirrel" parent="." instance=ExtResource("6_cs738")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20959, -1.90735e-06, -5.30713)
+transform = Transform3D(0.573019, 0, 0.819542, 0, 1, 0, -0.819542, 0, 0.573019, 6.3289, -0.0134803, -11.989)
 
 [connection signal="win" from="WinCond" to="." method="_on_win_cond_win"]
