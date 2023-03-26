@@ -137,7 +137,6 @@ offset_bottom = 467.0
 text = "Quit Game"
 
 [node name="WinScreen" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 427.0
@@ -157,7 +156,7 @@ bbcode_enabled = true
 text = "
 
 
-[b]                 You Won![/b]"
+[b]              Day Passed![/b]"
 
 [node name="WinNextDayButton" type="Button" parent="WinScreen"]
 layout_mode = 0
@@ -177,3 +176,9 @@ text = "Quit Game"
 
 [connection signal="finish_speaking" from="Dialog" to="." method="_on_dialog_finish_speaking"]
 [connection signal="visibility_changed" from="Dialog" to="Dialog" method="_on_visibility_changed"]
+[connection signal="pressed" from="StartScreen/StartStartButton" to="." method="_on_start_start_button_pressed"]
+[connection signal="pressed" from="StartScreen/StartQuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="GameOverScreen/GameOverRestartButton" to="." method="_on_game_over_restart_button_pressed"]
+[connection signal="pressed" from="GameOverScreen/GameOverQuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="WinScreen/WinNextDayButton" to="." method="_on_win_next_day_button_pressed"]
+[connection signal="pressed" from="WinScreen/WinQuitButton" to="." method="_on_quit_button_pressed"]

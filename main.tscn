@@ -16,5 +16,8 @@ wait_time = 0.5
 one_shot = true
 
 [connection signal="finish_speaking" from="UI" to="." method="_on_ui_finish_speaking"]
+[connection signal="next_day" from="UI" to="." method="_on_ui_next_day"]
+[connection signal="restart_day" from="UI" to="." method="_on_ui_restart_day"]
+[connection signal="start_game" from="UI" to="." method="_on_ui_start_game"]
 [connection signal="timeout" from="ScoreTimer" to="UI" method="_on_score_timer_timeout"]
 [connection signal="timeout" from="BeginningPhysicsTimer" to="." method="_on_beginning_physics_timer_timeout"]
