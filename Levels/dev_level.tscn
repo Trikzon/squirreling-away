@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://k3h0mwi0l7yc" path="res://Entities/StaticProp/StaticProp.tscn" id="2_imjrj"]
 [ext_resource type="PackedScene" uid="uid://6t75rxue57su" path="res://Entities/Pushable/pushable.tscn" id="3_xrncy"]
 [ext_resource type="PackedScene" uid="uid://b0pxgnxtvjrml" path="res://Zones/WinCod/win_cond.tscn" id="4_e0nx7"]
-[ext_resource type="PackedScene" uid="uid://cokc7hrek652b" path="res://Entities/Player/squirrel.tscn" id="6_cs738"]
+[ext_resource type="PackedScene" path="res://Entities/Player/squirrel.tscn" id="6_cs738"]
 [ext_resource type="PackedScene" uid="uid://j261jiswgead" path="res://Levels/Lighting/lighting.tscn" id="7_kq561"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne04s"]

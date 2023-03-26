@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl10xjdggndyt"]
+[gd_scene load_steps=14 format=3 uid="uid://dl10xjdggndyt"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_js0ba"]
 [ext_resource type="PackedScene" uid="uid://d4c0ytxt47vsi" path="res://Levels/kitchen.tscn" id="3_vbrw4"]
 [ext_resource type="PackedScene" uid="uid://cx2368v2jrve8" path="res://UI/ui.tscn" id="3_yldc6"]
+[ext_resource type="PackedScene" uid="uid://bg0nahvgujp6m" path="res://Entities/Pushable/meshes/apple.glb" id="4_hmhj6"]
+[ext_resource type="PackedScene" uid="uid://bje4ctritouvy" path="res://Entities/Pushable/meshes/blank_can.glb" id="5_qqho4"]
+[ext_resource type="PackedScene" uid="uid://bokinscjwgif" path="res://Entities/Pushable/meshes/coffee_cup.glb" id="7_ofwet"]
+[ext_resource type="PackedScene" uid="uid://chr8m6dcikxgd" path="res://Entities/Pushable/meshes/labeled_can.glb" id="8_474ao"]
+[ext_resource type="PackedScene" uid="uid://bjgs4lviks30u" path="res://Entities/Pushable/meshes/matches.glb" id="9_7bwfe"]
+[ext_resource type="PackedScene" uid="uid://duishmotm0u5g" path="res://Entities/Pushable/meshes/radio.glb" id="10_uoep6"]
+[ext_resource type="PackedScene" uid="uid://cnruwm4o3rrqx" path="res://Entities/Pushable/meshes/spray.glb" id="11_c254l"]
+[ext_resource type="PackedScene" uid="uid://bcxnskjttp0d1" path="res://Entities/Static/toaster.tscn" id="13_j0223"]
+[ext_resource type="PackedScene" uid="uid://cp6ft718jvoy5" path="res://Entities/Player/squirrel.glb" id="13_lxool"]
+[ext_resource type="PackedScene" uid="uid://dbv241xyo1q06" path="res://Entities/Static/blender.tscn" id="13_u4jt3"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_js0ba")
@@ -12,5 +22,35 @@ script = ExtResource("1_js0ba")
 [node name="ScoreTimer" type="Timer" parent="."]
 
 [node name="Kitchen" parent="." instance=ExtResource("3_vbrw4")]
+
+[node name="apple" parent="." instance=ExtResource("4_hmhj6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.12385, 0.5, 2.00597)
+
+[node name="blank_can" parent="." instance=ExtResource("5_qqho4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02597, 0.500001, 2.33673)
+
+[node name="coffee_cup" parent="." instance=ExtResource("7_ofwet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.164, -1.9226, 5.79801)
+
+[node name="labeled_can" parent="." instance=ExtResource("8_474ao")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.032, 0.499998, 5.201)
+
+[node name="matches" parent="." instance=ExtResource("9_7bwfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.89746, 0.500002, 5.50467)
+
+[node name="radio" parent="." instance=ExtResource("10_uoep6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56387, 0.5, -3.54506)
+
+[node name="spray" parent="." instance=ExtResource("11_c254l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10166, 0.5, -2.48543)
+
+[node name="squirrel" parent="." instance=ExtResource("13_lxool")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17864, 1.54371, -2.86619)
+
+[node name="blender" parent="." instance=ExtResource("13_u4jt3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3986, 0.554451, -4.82384)
+
+[node name="toaster" parent="." instance=ExtResource("13_j0223")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1841, -0.589513, -3.89509)
 
 [connection signal="timeout" from="ScoreTimer" to="UI" method="_on_score_timer_timeout"]
