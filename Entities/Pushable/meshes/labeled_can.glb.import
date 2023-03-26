@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://chr8m6dcikxgd"
-path="res://.godot/imported/labeled_can.glb-6019e207f60f49c977f8adeaa51dd6c3.scn"
+path="res://.godot/imported/labeled_can.glb-8e973caf4d242f6a130f3c051fcd9879.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/meshes/labeled_can.glb"
-dest_files=["res://.godot/imported/labeled_can.glb-6019e207f60f49c977f8adeaa51dd6c3.scn"]
+source_file="res://Entities/Pushable/Meshes/labeled_can.glb"
+dest_files=["res://.godot/imported/labeled_can.glb-8e973caf4d242f6a130f3c051fcd9879.scn"]
 
 [params]
 

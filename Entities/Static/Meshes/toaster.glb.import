@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cj2wvdjmyqoq1"
-path="res://.godot/imported/toaster.glb-a379b5d497be240bef76a7a26a537e74.scn"
+path="res://.godot/imported/toaster.glb-b63340585b2ccea1c95e86303eb4db16.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/meshes/toaster.glb"
-dest_files=["res://.godot/imported/toaster.glb-a379b5d497be240bef76a7a26a537e74.scn"]
+source_file="res://Entities/Static/Meshes/toaster.glb"
+dest_files=["res://.godot/imported/toaster.glb-b63340585b2ccea1c95e86303eb4db16.scn"]
 
 [params]
 

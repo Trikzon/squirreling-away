@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwg8h3kvgax7c"]
+
+[ext_resource type="Script" path="res://Entities/Pushable/pushable.gd" id="1_tihwb"]
+[ext_resource type="PackedScene" uid="uid://chr8m6dcikxgd" path="res://Entities/Pushable/Meshes/labeled_can.glb" id="2_rlyv3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gldo0"]
+radius = 0.75
+
+[node name="LabeledCan" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_tihwb")
+
+[node name="labeled_can" parent="." instance=ExtResource("2_rlyv3")]
+transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 2.08165e-12, -1, 2.08165e-12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_gldo0")
+
+[node name="FreezeTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="FreezeTimer" to="." method="_on_timer_timeout"]
