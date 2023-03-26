@@ -4,6 +4,8 @@
 [ext_resource type="Script" path="res://UI/ui.gd" id="1_7yrqp"]
 [ext_resource type="FontFile" uid="uid://bxg0rsghsvls8" path="res://Fonts/Montserrat-Bold.ttf" id="3_fvtm0"]
 [ext_resource type="PackedScene" uid="uid://bm5daf0p8261s" path="res://UI/dialog.tscn" id="4_jnwbp"]
+[ext_resource type="Texture2D" uid="uid://bh4iyx36onawj" path="res://UI/Assets/DialougBox.png" id="5_t6pni"]
+[ext_resource type="Texture2D" uid="uid://tb65svyj6j6c" path="res://UI/Assets/Squirrel.png" id="6_1s7em"]
 
 [sub_resource type="GDScript" id="GDScript_0fs3e"]
 script/source = "extends Label
