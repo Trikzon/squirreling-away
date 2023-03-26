@@ -1223,6 +1223,8 @@ transform = Transform3D(-0.0121995, 0, -0.999926, 0, 1, 0, 0.999926, 0, -0.01219
 [node name="WinCond" parent="." instance=ExtResource("26_4iswk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0782, 0.940912, 0)
 
+[connection signal="light" from="Lighting" to="Player" method="_on_lighting_light"]
+
 [editable path="leader_squirrel"]
 [editable path="squirrel"]
 [editable path="squirrel2"]

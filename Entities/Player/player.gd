@@ -21,6 +21,7 @@ var pushing: Pushable = null
 var pushing_position: Vector3 = Vector3.ZERO
 var pushing_collision: CollisionShape3D = null
 
+var died = false
 
 func _process(_delta):
     if Input.is_action_just_pressed("push") and is_on_floor():
@@ -127,3 +128,7 @@ func entershadow(body):
 func exitshadow(body):
     if body==closest_shadow:
         closest_shadow=null
+
+func _on_lighting_light():
+    if not closest_shadow:
+        died = true

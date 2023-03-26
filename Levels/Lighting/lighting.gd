@@ -4,6 +4,7 @@ var rng = RandomNumberGenerator.new()
 var Inside=false
 var Outside=true
 var my_random_number
+signal light
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -50,5 +51,4 @@ func _on_inbetween_timer_timeout():
     $HideTimer.start()
     $Spotlight.hide()
     $Light.light_energy=1
-    if(Outside==true):
-        print("You Died")
+    light.emit()

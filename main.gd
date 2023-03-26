@@ -46,6 +46,7 @@ func next_day():
 func start_day():
     if level_node:
         level_node.win.disconnect(_on_win)
+        level_node.die.disconnect(_on_die)
         level_node.queue_free()
     match day:
         0: level_node = DAY_0_TSCN.instantiate()
@@ -58,6 +59,7 @@ func start_day():
     level_node.init(OBJECTIVE_NAMES[day])
     add_child(level_node)
     level_node.win.connect(_on_win)
+    level_node.die.connect(_on_die)
     $BeginningPhysicsTimer.start()
 
 
@@ -84,7 +86,11 @@ func _on_ui_next_day():
 
 
 func _on_ui_restart_day():
+    $UI.hideAllScreens()
     start_day()
 
 func _on_win():
     $UI.enableWinScreen()
+
+func _on_die():
+    $UI.enableGameOverScreen()

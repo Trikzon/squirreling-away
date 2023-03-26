@@ -2,6 +2,7 @@ extends Node3D
 class_name Day
 
 signal win
+signal die
 
 var objective_name: String
 
@@ -16,3 +17,6 @@ func _process(delta):
     if $Kitchen/WinCond.won:
         win.emit()
         $Kitchen/WinCond.won = false
+    if $Kitchen/Player.died:
+        die.emit()
+        $Kitchen/Player.died = false

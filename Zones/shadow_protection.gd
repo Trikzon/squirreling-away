@@ -12,10 +12,12 @@ func _process(delta):
 
 
 func _on_area_3d_body_entered(body):
+    print("Enter")
     if body is Player:
-        body.entershadow(body)
+        body.entershadow($Area3D)
 
 
 func _on_area_3d_body_exited(body):
+    print("Exit")
     if body is Player:
-        body.exitshadow(body)
+        body.exitshadow($Area3D)
