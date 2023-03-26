@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bh131xjgippe2"]
+[gd_scene load_steps=9 format=3 uid="uid://bh131xjgippe2"]
 
 [ext_resource type="PackedScene" uid="uid://bsq6kupgh27i2" path="res://Entities/Player/player.tscn" id="1_mkk37"]
+[ext_resource type="Script" path="res://Levels/dev_level.gd" id="1_u8lsh"]
 [ext_resource type="PackedScene" uid="uid://k3h0mwi0l7yc" path="res://Entities/StaticProp/StaticProp.tscn" id="2_imjrj"]
 [ext_resource type="PackedScene" uid="uid://6t75rxue57su" path="res://Entities/Pushable/pushable.tscn" id="3_xrncy"]
+[ext_resource type="PackedScene" uid="uid://b0pxgnxtvjrml" path="res://Zones/WinCod/win_cond.tscn" id="4_e0nx7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne04s"]
 albedo_color = Color(0.291886, 0.331853, 0.396783, 1)
@@ -15,6 +17,7 @@ size = Vector2(50, 25)
 size = Vector3(50, 1, 25)
 
 [node name="DevLevel" type="Node3D"]
+script = ExtResource("1_u8lsh")
 
 [node name="Ground" type="StaticBody3D" parent="."]
 collision_mask = 0
@@ -53,5 +56,10 @@ transform = Transform3D(2.68849, 0, 0, 0, 2.55942, 0, 0, 0, 2.55702, -5.69441, -
 [node name="StaticProp2" parent="." instance=ExtResource("2_imjrj")]
 transform = Transform3D(7.22799, 0, 0, 0, 6.55062, 0, 0, 0, 6.53834, 9.14736, -1.45012, 5.61121)
 
-[node name="Pushable" parent="." instance=ExtResource("3_xrncy")]
+[node name="Book" parent="." instance=ExtResource("3_xrncy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76986, 1.6926, 0)
+
+[node name="WinCond" parent="." instance=ExtResource("4_e0nx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2301, 0.122012, 0)
+
+[connection signal="win" from="WinCond" to="." method="_on_win_cond_win"]

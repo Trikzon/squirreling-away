@@ -1,0 +1,255 @@
+[gd_scene load_steps=11 format=3 uid="uid://cv8x5k7hig8iy"]
+
+[ext_resource type="Script" path="res://UI/dialog.gd" id="1_hw6gy"]
+[ext_resource type="Texture2D" uid="uid://d2260ccyiges3" path="res://UI/DialougBox.png" id="1_xerot"]
+[ext_resource type="FontFile" uid="uid://b3u35yfgodov6" path="res://Fonts/Montserrat-Medium.ttf" id="2_r71fp"]
+[ext_resource type="Texture2D" uid="uid://tb65svyj6j6c" path="res://UI/Squirrel.png" id="4_o6s5b"]
+
+[sub_resource type="Animation" id="Animation_j8138"]
+resource_name = "Text Animation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.5, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_m0cty"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l1htm"]
+_data = {
+"RESET": SubResource("Animation_m0cty"),
+"Text Animation": SubResource("Animation_j8138")
+}
+
+[sub_resource type="Animation" id="Animation_54mul"]
+resource_name = "Wiggle"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fnytu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2d86k"]
+_data = {
+"RESET": SubResource("Animation_fnytu"),
+"Wiggle": SubResource("Animation_54mul")
+}
+
+[node name="Dialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 332.0
+offset_top = 205.0
+offset_right = -558.0
+offset_bottom = -369.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hw6gy")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -128.0
+offset_right = 360.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xerot")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 44.0
+offset_right = -35.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BodyText" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_right = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_r71fp")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.5
+
+[node name="TextAnimation" type="AnimationPlayer" parent="NinePatchRect/BodyText"]
+libraries = {
+"": SubResource("AnimationLibrary_l1htm")
+}
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -388.0
+offset_top = 91.0
+offset_right = -182.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xerot")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Speaker" type="Label" parent="NinePatchRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_right = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_r71fp")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = 121.0
+offset_right = -122.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xerot")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="SquirrelBox" type="TextureRect" parent="NinePatchRect3"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 60.0
+offset_bottom = 57.0
+texture = ExtResource("4_o6s5b")
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 221.0
+offset_top = -177.0
+offset_right = 427.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(103, 45)
+texture = ExtResource("1_xerot")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Control" type="Label" parent="NinePatchRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = -8.0
+offset_right = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Enter
+to Continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ControlAnimation" type="AnimationPlayer" parent="NinePatchRect4"]
+libraries = {
+"": SubResource("AnimationLibrary_2d86k")
+}
+
+[connection signal="animation_finished" from="NinePatchRect/BodyText/TextAnimation" to="." method="_on_text_animation_animation_finished"]

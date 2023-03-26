@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0pxgnxtvjrml"]
+
+[ext_resource type="Script" path="res://Zones/WinCod/win_cond.gd" id="1_jev1h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h7jb3"]
+size = Vector3(5, 0, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7x3mv"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.294118)
+
+[sub_resource type="BoxMesh" id="BoxMesh_85l8s"]
+material = SubResource("StandardMaterial3D_7x3mv")
+size = Vector3(5, 0, 5)
+
+[node name="WinCond" type="Area3D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_jev1h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_h7jb3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_85l8s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

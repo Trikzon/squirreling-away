@@ -45,26 +45,26 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("player_left", "player_right", "player_forward", "player_backward")
 	var direction = Vector3(input_dir.x, 0, input_dir.y).normalized()
-	var LocalSpeed
+	var local_speed
 	if pushing:
-		LocalSpeed=PUSHSPEED
+		local_speed=PUSHSPEED
 	else:
-		LocalSpeed=SPEED
+		local_speed=SPEED
 	if direction:
-		velocity.x = direction.x * LocalSpeed
-		velocity.z = direction.z * LocalSpeed
+		velocity.x = direction.x * local_speed
+		velocity.z = direction.z * local_speed
 		
 		look_at(Vector3.FORWARD.rotated(Vector3.UP, rotation.y).lerp( direction*-1 , ROTATION_SPEED) + position)
 	else:
-		velocity.x = move_toward(velocity.x, 0, LocalSpeed)
-		velocity.z = move_toward(velocity.z, 0, LocalSpeed)
+		velocity.x = move_toward(velocity.x, 0, local_speed)
+		velocity.z = move_toward(velocity.z, 0, local_speed)
 		
 	if velocity:
 		$hamster_walk_2/AnimationTree.set("parameters/conditions/walk", true)
