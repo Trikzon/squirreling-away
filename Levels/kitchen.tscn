@@ -814,22 +814,8 @@ parameters/playback = SubResource("AnimationNodeStateMachinePlayback_pdioe")
 transform = Transform3D(-0.373602, 0, 0.474593, 0, 0.604, 0, -0.474593, 0, -0.373602, -32.2302, 0.570421, -3.75584)
 
 [node name="Skeleton3D" parent="squirrel/Armature" index="0"]
-bones/1/rotation = Quaternion(0.0670222, 0.536411, 0.114108, 0.833517)
-bones/2/rotation = Quaternion(-0.00239378, 0.0660255, 0.162785, 0.984447)
-bones/3/rotation = Quaternion(0.419487, -0.0718889, -0.463016, 0.777483)
-bones/4/rotation = Quaternion(-0.093291, 0.329141, -0.627004, 0.699878)
-bones/5/rotation = Quaternion(0.732947, 0.0431837, 0.0858947, 0.673459)
 bones/6/rotation = Quaternion(0.490546, 0.000426779, 0.234921, 0.839152)
-bones/7/rotation = Quaternion(0.0617058, 0.00297669, 0.0356746, 0.997452)
 bones/8/rotation = Quaternion(0.139442, -4.77382e-08, 0.0581498, 0.988521)
-bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
-bones/10/rotation = Quaternion(-0.403566, -0.24723, -0.379148, 0.795147)
-bones/11/rotation = Quaternion(-0.0813467, -0.000239684, -0.0330587, 0.996137)
-bones/12/rotation = Quaternion(-0.132802, -0.0154302, -0.0720365, 0.988401)
-bones/13/rotation = Quaternion(0.379298, -0.0124702, 0.921156, -0.086306)
-bones/14/rotation = Quaternion(0.576533, 0.385216, -0.564793, 0.447468)
-bones/15/rotation = Quaternion(-0.411877, -0.0707257, 0.908208, 0.0226441)
-bones/16/rotation = Quaternion(0.678195, -0.120342, 0.424293, 0.58783)
 
 [node name="mesh" parent="squirrel/Armature/Skeleton3D" index="0"]
 layers = 2
@@ -841,22 +827,8 @@ parameters/playback = SubResource("AnimationNodeStateMachinePlayback_ars7x")
 transform = Transform3D(0.476483, 0, 0.371186, 0, 0.604, 0, -0.371186, 0, 0.476483, -29.1063, 0.570421, -3.41139)
 
 [node name="Skeleton3D" parent="squirrel2/Armature" index="0"]
-bones/1/rotation = Quaternion(0.0670222, 0.536411, 0.114108, 0.833517)
-bones/2/rotation = Quaternion(-0.00239378, 0.0660255, 0.162785, 0.984447)
-bones/3/rotation = Quaternion(0.419487, -0.0718889, -0.463016, 0.777483)
-bones/4/rotation = Quaternion(-0.093291, 0.329141, -0.627004, 0.699878)
-bones/5/rotation = Quaternion(0.732947, 0.0431837, 0.0858947, 0.673459)
 bones/6/rotation = Quaternion(0.490546, 0.000426779, 0.234921, 0.839152)
-bones/7/rotation = Quaternion(0.0617058, 0.00297669, 0.0356746, 0.997452)
 bones/8/rotation = Quaternion(0.139442, -4.77382e-08, 0.0581498, 0.988521)
-bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
-bones/10/rotation = Quaternion(-0.403566, -0.24723, -0.379148, 0.795147)
-bones/11/rotation = Quaternion(-0.0813467, -0.000239684, -0.0330587, 0.996137)
-bones/12/rotation = Quaternion(-0.132802, -0.0154302, -0.0720365, 0.988401)
-bones/13/rotation = Quaternion(0.379298, -0.0124702, 0.921156, -0.086306)
-bones/14/rotation = Quaternion(0.576533, 0.385216, -0.564793, 0.447468)
-bones/15/rotation = Quaternion(-0.411877, -0.0707257, 0.908208, 0.0226441)
-bones/16/rotation = Quaternion(0.678195, -0.120342, 0.424293, 0.58783)
 
 [node name="mesh" parent="squirrel2/Armature/Skeleton3D" index="0"]
 layers = 2

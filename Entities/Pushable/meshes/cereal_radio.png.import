@@ -3,17 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm0u2okgf05ny"
-path.s3tc="res://.godot/imported/cereal_radio.png-6372065283482d2ecb031ddfabcbf154.s3tc.ctex"
+path.etc2="res://.godot/imported/cereal_radio.png-51ae1bb39a8174302d23645c3bc83eca.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
 
 [deps]
 
-source_file="res://Entities/Pushable/meshes/cereal_radio.png"
-dest_files=["res://.godot/imported/cereal_radio.png-6372065283482d2ecb031ddfabcbf154.s3tc.ctex"]
+source_file="res://Entities/Pushable/Meshes/cereal_radio.png"
+dest_files=["res://.godot/imported/cereal_radio.png-51ae1bb39a8174302d23645c3bc83eca.etc2.ctex"]
 
 [params]
 

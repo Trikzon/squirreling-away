@@ -3,17 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cak6khyubjmn2"
-path.s3tc="res://.godot/imported/cereal_princess_spray.png-913ec54513b45d6d58876398dac8074c.s3tc.ctex"
+path.etc2="res://.godot/imported/cereal_princess_spray.png-0c1de6e90315e6d5916e66f499e3e580.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
 
 [deps]
 
-source_file="res://Entities/Pushable/meshes/cereal_princess_spray.png"
-dest_files=["res://.godot/imported/cereal_princess_spray.png-913ec54513b45d6d58876398dac8074c.s3tc.ctex"]
+source_file="res://Entities/Pushable/Meshes/cereal_princess_spray.png"
+dest_files=["res://.godot/imported/cereal_princess_spray.png-0c1de6e90315e6d5916e66f499e3e580.etc2.ctex"]
 
 [params]
 
