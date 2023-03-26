@@ -5,6 +5,21 @@
 [ext_resource type="FontFile" uid="uid://b3u35yfgodov6" path="res://Fonts/Montserrat-Medium.ttf" id="2_r71fp"]
 [ext_resource type="Texture2D" uid="uid://tb65svyj6j6c" path="res://UI/Squirrel.png" id="4_o6s5b"]
 
+[sub_resource type="Animation" id="Animation_m0cty"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
 [sub_resource type="Animation" id="Animation_j8138"]
 resource_name = "Text Animation"
 length = 2.0
@@ -21,25 +36,25 @@ tracks/0/keys = {
 "values": [0.0, 0.5, 1.0]
 }
 
-[sub_resource type="Animation" id="Animation_m0cty"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l1htm"]
+_data = {
+"RESET": SubResource("Animation_m0cty"),
+"Text Animation": SubResource("Animation_j8138")
+}
+
+[sub_resource type="Animation" id="Animation_fnytu"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.5]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_l1htm"]
-_data = {
-"RESET": SubResource("Animation_m0cty"),
-"Text Animation": SubResource("Animation_j8138")
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_54mul"]
@@ -56,21 +71,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_fnytu"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2d86k"]

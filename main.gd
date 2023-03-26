@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _on_dev_level_win():
-	pass
+	$ScoreTimer.stop()
