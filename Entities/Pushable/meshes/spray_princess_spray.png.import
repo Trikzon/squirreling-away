@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmeq317snc1uv"
-path.etc2="res://.godot/imported/spray_princess_spray.png-82e3802e1edc011d6318440df6c4dbed.etc2.ctex"
+path.s3tc="res://.godot/imported/spray_princess_spray.png-82e3802e1edc011d6318440df6c4dbed.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +13,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Entities/Pushable/meshes/spray_princess_spray.png"
-dest_files=["res://.godot/imported/spray_princess_spray.png-82e3802e1edc011d6318440df6c4dbed.etc2.ctex"]
+dest_files=["res://.godot/imported/spray_princess_spray.png-82e3802e1edc011d6318440df6c4dbed.s3tc.ctex"]
 
 [params]
 
