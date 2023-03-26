@@ -15,12 +15,20 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-		if $AnimationTree.get("parameters/conditions/idle") and $boredom_timer.is_stopped():
-			$boredom_timer.start()
-			print("started")
+    if $AnimationTree.get("parameters/conditions/idle") \
+    and not $AnimationTree.get("parameters/conditions/bored") \
+    and $boredom_timer.is_stopped():
+        $boredom_timer.start()
+        print("started")
+    
+    if $AnimationTree.get("parameters/conditions/walk"):
+        $boredom_timer.stop()
+        
 
 func _on_boredom_timer_timeout():
-	$AnimationTree.set("parameters/conditions/bored", true)
-	$AnimationTree.set("parameters/conditions/idle", false)
-	print("playing")
-	
+    $AnimationTree.set("parameters/conditions/bored", true)
+    print("playing")
+    $boredom_loop_timer.start()
+    
+func _on_boredom_loop_timer_timeout():
+    $AnimationTree.set("parameters/conditions/bored", false)
