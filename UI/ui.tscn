@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cx2368v2jrve8"]
+[gd_scene load_steps=6 format=3 uid="uid://cx2368v2jrve8"]
 
 [ext_resource type="FontFile" uid="uid://b3u35yfgodov6" path="res://Fonts/Montserrat-Medium.ttf" id="1_0aoud"]
 [ext_resource type="Script" path="res://UI/ui.gd" id="1_7yrqp"]
 [ext_resource type="FontFile" uid="uid://bxg0rsghsvls8" path="res://Fonts/Montserrat-Bold.ttf" id="3_fvtm0"]
 [ext_resource type="PackedScene" uid="uid://bm5daf0p8261s" path="res://UI/dialog.tscn" id="4_jnwbp"]
-[ext_resource type="Texture2D" uid="uid://bh4iyx36onawj" path="res://UI/Assets/DialougBox.png" id="5_t6pni"]
-[ext_resource type="Texture2D" uid="uid://tb65svyj6j6c" path="res://UI/Assets/Squirrel.png" id="6_1s7em"]
 
 [sub_resource type="GDScript" id="GDScript_0fs3e"]
 script/source = "extends Label
@@ -58,45 +56,3 @@ offset_left = 519.0
 offset_top = 64.0
 offset_right = -371.0
 offset_bottom = -510.0
-
-[node name="WarningMessage" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_left = 1762.0
-offset_top = 990.0
-offset_right = 1917.0
-offset_bottom = 1079.0
-texture = ExtResource("5_t6pni")
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
-
-[node name="Label" type="Label" parent="WarningMessage"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 30.0
-offset_right = 136.0
-offset_bottom = 59.0
-theme_override_fonts/font = ExtResource("1_0aoud")
-theme_override_font_sizes/font_size = 20
-text = "Watch Out!"
-
-[node name="Sqeakers" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_left = 1679.0
-offset_top = 990.0
-offset_right = 1765.0
-offset_bottom = 1079.0
-texture = ExtResource("5_t6pni")
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
-
-[node name="TextureRect" type="TextureRect" parent="Sqeakers"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 82.0
-offset_bottom = 85.0
-texture = ExtResource("6_1s7em")
