@@ -137,6 +137,7 @@ offset_bottom = 467.0
 text = "Quit Game"
 
 [node name="WinScreen" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 427.0
@@ -174,6 +175,52 @@ offset_right = 694.0
 offset_bottom = 467.0
 text = "Quit Game"
 
+[node name="RealWinScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 427.0
+offset_top = 278.0
+offset_right = 1627.0
+offset_bottom = 778.0
+
+[node name="YouWinText" type="RichTextLabel" parent="RealWinScreen"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 240.0
+grow_horizontal = 2
+theme_override_fonts/bold_font = ExtResource("3_fvtm0")
+theme_override_font_sizes/bold_font_size = 80
+bbcode_enabled = true
+text = "
+
+
+[b]                  You won![/b]"
+
+[node name="Score" type="RichTextLabel" parent="RealWinScreen"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 141.0
+offset_bottom = 381.0
+grow_horizontal = 2
+theme_override_fonts/bold_font = ExtResource("3_fvtm0")
+theme_override_font_sizes/bold_font_size = 80
+bbcode_enabled = true
+text = "
+
+
+[b]                  Score: 0[/b]"
+
+[node name="WinQuitButton" type="Button" parent="RealWinScreen"]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 342.0
+offset_right = 694.0
+offset_bottom = 467.0
+text = "Quit Game"
+
 [connection signal="finish_speaking" from="Dialog" to="." method="_on_dialog_finish_speaking"]
 [connection signal="visibility_changed" from="Dialog" to="Dialog" method="_on_visibility_changed"]
 [connection signal="pressed" from="StartScreen/StartStartButton" to="." method="_on_start_start_button_pressed"]
@@ -182,3 +229,4 @@ text = "Quit Game"
 [connection signal="pressed" from="GameOverScreen/GameOverQuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="WinScreen/WinNextDayButton" to="." method="_on_win_next_day_button_pressed"]
 [connection signal="pressed" from="WinScreen/WinQuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="RealWinScreen/WinQuitButton" to="." method="_on_quit_button_pressed"]

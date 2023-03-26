@@ -3,9 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kuan6gtslipf"
-path.etc2="res://.godot/imported/posters_poster.png-dc46631affc1b1f5e012e2aa44b88f0c.etc2.ctex"
+path.s3tc="res://.godot/imported/posters_poster.png-dc46631affc1b1f5e012e2aa44b88f0c.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +13,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Levels/posters_poster.png"
-dest_files=["res://.godot/imported/posters_poster.png-dc46631affc1b1f5e012e2aa44b88f0c.etc2.ctex"]
+dest_files=["res://.godot/imported/posters_poster.png-dc46631affc1b1f5e012e2aa44b88f0c.s3tc.ctex"]
 
 [params]
 

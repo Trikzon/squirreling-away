@@ -1027,15 +1027,15 @@ shape = SubResource("BoxShape3D_e46oi")
 mesh = SubResource("BoxMesh_frae5")
 
 [node name="SquirrelRoomShadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.9048, 0, 0)
 
 [node name="Area3D" parent="Shadows/SquirrelRoomShadow" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203, 0.653, 4.849)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50955, 0.653, -0.331248)
 
 [node name="CollisionShape3D" parent="Shadows/SquirrelRoomShadow/Area3D" index="0"]
 shape = SubResource("BoxShape3D_d85mk")
 
 [node name="MeshInstance3D" parent="Shadows/SquirrelRoomShadow/Area3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6035, 1.06618, -5.21895)
 mesh = SubResource("BoxMesh_bpion")
 
 [node name="Door1Shadow" parent="Shadows" instance=ExtResource("20_26rbk")]
