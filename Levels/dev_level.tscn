@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bh131xjgippe2"]
+[gd_scene load_steps=13 format=3 uid="uid://bh131xjgippe2"]
 
 [ext_resource type="PackedScene" uid="uid://bsq6kupgh27i2" path="res://Entities/Player/player.tscn" id="1_mkk37"]
 [ext_resource type="Script" path="res://Levels/dev_level.gd" id="1_u8lsh"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://6t75rxue57su" path="res://Entities/Pushable/pushable.tscn" id="3_xrncy"]
 [ext_resource type="PackedScene" uid="uid://b0pxgnxtvjrml" path="res://Zones/WinCod/win_cond.tscn" id="4_e0nx7"]
 [ext_resource type="PackedScene" uid="uid://cokc7hrek652b" path="res://Entities/Player/squirrel.tscn" id="6_cs738"]
+[ext_resource type="PackedScene" uid="uid://bjgs4lviks30u" path="res://Entities/Pushable/meshes/matches.glb" id="7_nno14"]
+[ext_resource type="PackedScene" uid="uid://duishmotm0u5g" path="res://Entities/Pushable/meshes/radio.glb" id="8_lfeyp"]
+[ext_resource type="PackedScene" uid="uid://cnruwm4o3rrqx" path="res://Entities/Pushable/meshes/spray.glb" id="9_wnjvm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne04s"]
 albedo_color = Color(0.291886, 0.331853, 0.396783, 1)
@@ -67,5 +70,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2301, 0.122012, 0)
 
 [node name="squirrel" parent="." instance=ExtResource("6_cs738")]
 transform = Transform3D(0.573019, 0, 0.819542, 0, 1, 0, -0.819542, 0, 0.573019, 6.3289, -0.0134803, -11.989)
+
+[node name="matches" parent="." instance=ExtResource("7_nno14")]
+transform = Transform3D(0.0187089, 0, -0.999825, 0, 1, 0, 0.999825, 0, 0.0187089, 4.39376, 2.38419e-07, 1.07968)
+
+[node name="radio" parent="." instance=ExtResource("8_lfeyp")]
+transform = Transform3D(0.0479782, 0, -0.998848, 0, 1, 0, 0.998848, 0, 0.0479782, -5.7597, 7.15256e-07, 2.38787)
+
+[node name="spray" parent="." instance=ExtResource("9_wnjvm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97147, 0.144035, 1.13475)
 
 [connection signal="win" from="WinCond" to="." method="_on_win_cond_win"]
