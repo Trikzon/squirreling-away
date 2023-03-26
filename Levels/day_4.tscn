@@ -1,0 +1,96 @@
+[gd_scene load_steps=15 format=3 uid="uid://eyfjkpojd4d3"]
+
+[ext_resource type="Script" path="res://Levels/day.gd" id="1_v3n5c"]
+[ext_resource type="PackedScene" uid="uid://d4c0ytxt47vsi" path="res://Levels/kitchen.tscn" id="2_xrypj"]
+[ext_resource type="PackedScene" uid="uid://drkdjp0xen7l1" path="res://Entities/Pushable/coffee_cup.tscn" id="3_7gkpe"]
+[ext_resource type="PackedScene" path="res://Entities/Pushable/cereal.tscn" id="4_02oq5"]
+[ext_resource type="PackedScene" uid="uid://bnbdoegnx0m4c" path="res://Entities/Static/Meshes/plate.glb" id="5_84kj2"]
+[ext_resource type="PackedScene" uid="uid://qkh4m8nnl2n5" path="res://Entities/Pushable/spray.tscn" id="6_o1t4p"]
+[ext_resource type="PackedScene" uid="uid://8p07mwtvtkp4" path="res://Entities/Pushable/blank_can.tscn" id="7_n2tli"]
+[ext_resource type="PackedScene" uid="uid://cwg8h3kvgax7c" path="res://Entities/Pushable/labeled_can.tscn" id="8_jknep"]
+[ext_resource type="PackedScene" path="res://Entities/Pushable/jar.tscn" id="9_7o0ia"]
+[ext_resource type="PackedScene" uid="uid://cgntg1dsvl31q" path="res://Entities/Static/toaster.tscn" id="10_e117h"]
+[ext_resource type="PackedScene" uid="uid://k31jhlpbkxri" path="res://Entities/Pushable/matches.tscn" id="10_hkwkh"]
+[ext_resource type="PackedScene" path="res://Entities/Static/knife.tscn" id="11_a66wg"]
+[ext_resource type="PackedScene" uid="uid://b5a3j5o4u4jpm" path="res://Entities/Pushable/radio.tscn" id="12_e7fsk"]
+[ext_resource type="PackedScene" uid="uid://ca1iodagghqn2" path="res://Entities/Pushable/apple.tscn" id="13_7inmp"]
+
+[node name="Day4" type="Node3D"]
+script = ExtResource("1_v3n5c")
+
+[node name="Kitchen" parent="." instance=ExtResource("2_xrypj")]
+
+[node name="Pushable" parent="." instance=ExtResource("3_7gkpe")]
+transform = Transform3D(0.698103, 0, -0.715997, 0, 1, 0, 0.715997, 0, 0.698103, -0.276072, 1.40277, 4.1962)
+
+[node name="Pushable2" parent="." instance=ExtResource("3_7gkpe")]
+transform = Transform3D(0.304715, 0, 0.952444, 0, 1, 0, -0.952444, 0, 0.304715, -4.64024, 1.4096, 6.35951)
+
+[node name="Cereal" parent="." instance=ExtResource("4_02oq5")]
+transform = Transform3D(0.012374, 0, -0.999923, 0, 1, 0, 0.999923, 0, 0.012374, 6.06164, 0.5, -4.29833)
+
+[node name="plate2" parent="." instance=ExtResource("5_84kj2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.088, 1.15188, 6.42037)
+
+[node name="plate" parent="." instance=ExtResource("5_84kj2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6141, 0.575939, 6.30541)
+
+[node name="Pushable3" parent="." instance=ExtResource("7_n2tli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7258, 13.6894, 2.21301)
+
+[node name="LabeledCan" parent="." instance=ExtResource("8_jknep")]
+transform = Transform3D(0.834598, 0, -0.55086, 0, 1, 0, 0.55086, 0, 0.834598, 20.6387, 13.626, 2.4149)
+
+[node name="Pushable4" parent="." instance=ExtResource("7_n2tli")]
+transform = Transform3D(0.888777, 0, 0.458339, 0, 1, 0, -0.458339, 0, 0.888777, 16.324, 13.6894, 0.300185)
+
+[node name="LabeledCan2" parent="." instance=ExtResource("8_jknep")]
+transform = Transform3D(0.994252, 0, -0.107062, 0, 1, 0, 0.107062, 0, 0.994252, 18.1167, 13.626, 0.626009)
+
+[node name="LabeledCan3" parent="." instance=ExtResource("9_7o0ia")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9723, 13.9479, 2.07369)
+
+[node name="Pushable6" parent="." instance=ExtResource("7_n2tli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7258, 19.75, 2.21301)
+
+[node name="LabeledCan6" parent="." instance=ExtResource("8_jknep")]
+transform = Transform3D(0.834598, 0, -0.55086, 0, 1, 0, 0.55086, 0, 0.834598, 20.6387, 19.6866, 2.4149)
+
+[node name="Pushable7" parent="." instance=ExtResource("7_n2tli")]
+transform = Transform3D(0.888777, 0, 0.458339, 0, 1, 0, -0.458339, 0, 0.888777, 16.324, 19.75, 0.300185)
+
+[node name="LabeledCan7" parent="." instance=ExtResource("8_jknep")]
+transform = Transform3D(0.994252, 0, -0.107062, 0, 1, 0, 0.107062, 0, 0.994252, 18.1167, 19.6866, 0.626009)
+
+[node name="LabeledCan8" parent="." instance=ExtResource("9_7o0ia")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9723, 20.0085, 2.07369)
+
+[node name="Pushable5" parent="." instance=ExtResource("3_7gkpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7153, 1.40738, 6.05293)
+
+[node name="LabeledCan4" parent="." instance=ExtResource("8_jknep")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9248, 1.69992, 5.33392)
+
+[node name="LabeledCan5" parent="." instance=ExtResource("8_jknep")]
+transform = Transform3D(0.680235, 0, -0.732994, 0, 1, 0, 0.732994, 0, 0.680235, 23.9248, 4.24623, 5.33392)
+
+[node name="toaster" parent="." instance=ExtResource("10_e117h")]
+transform = Transform3D(-0.411037, 4.61325e-16, 0.911619, 3.48787e-16, 1, -3.48787e-16, -0.911619, 1.74596e-16, -0.411037, 29.1598, -0.594407, 5.96554)
+
+[node name="Matches" parent="." instance=ExtResource("10_hkwkh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03876, 19.9694, 3.00729)
+
+[node name="Knife" parent="." instance=ExtResource("11_a66wg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.96727, 18.7525, 0.554864)
+
+[node name="Knife2" parent="." instance=ExtResource("11_a66wg")]
+transform = Transform3D(0.889895, 0, -0.456166, 0, 1, 0, 0.456166, 0, 0.889895, -8.96727, 19.3871, 0.554864)
+
+[node name="Radio" parent="." instance=ExtResource("12_e7fsk")]
+transform = Transform3D(0.543468, 0, 0.83943, 0, 1, 0, -0.83943, 0, 0.543468, -30.1641, 2.17024, 2.35931)
+
+[node name="Apple" parent="." instance=ExtResource("13_7inmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.4407, 2.23795, 0.259302)
+
+[node name="Spray" parent="." instance=ExtResource("6_o1t4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8909, 2.11409, 3.82346)

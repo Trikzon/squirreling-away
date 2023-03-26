@@ -10,4 +10,4 @@ script = ExtResource("1_kymc7")
 [node name="Kitchen" parent="." instance=ExtResource("1_q568j")]
 
 [node name="Apple" parent="." instance=ExtResource("3_kcg6e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.28398, 1.30612, -2.67524)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38309, 1.9087, -2.67524)
