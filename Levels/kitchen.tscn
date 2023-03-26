@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=3 uid="uid://d4c0ytxt47vsi"]
+[gd_scene load_steps=110 format=3 uid="uid://d4c0ytxt47vsi"]
 
 [ext_resource type="PackedScene" uid="uid://bahsd6t604ygh" path="res://Entities/Static/sink.tscn" id="2_f4jxx"]
 [ext_resource type="Material" uid="uid://cusifduxx017h" path="res://Levels/counter_wood.tres" id="2_sv52j"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cnfmmalqsktpk" path="res://Levels/hideout.glb" id="18_02k5b"]
 [ext_resource type="PackedScene" uid="uid://dhux0b18ltemy" path="res://Levels/posters.glb" id="19_rhak3"]
 [ext_resource type="PackedScene" uid="uid://dl2js6q1fwowj" path="res://Entities/Pushable/jar.tscn" id="19_s3sob"]
+[ext_resource type="PackedScene" uid="uid://daewciwopihju" path="res://Zones/shadow_protection.tscn" id="20_26rbk"]
 [ext_resource type="Texture2D" uid="uid://kuan6gtslipf" path="res://Levels/posters_poster.png" id="20_63r8b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ry4p0"]
@@ -289,6 +290,58 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fum7d")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fgfe1"]
+size = Vector3(15, 2, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_73xy2"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_787uc"]
+material = SubResource("StandardMaterial3D_73xy2")
+size = Vector3(15, 2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e46oi"]
+size = Vector3(10, 2.6, 3.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_frae5"]
+material = SubResource("StandardMaterial3D_73xy2")
+size = Vector3(10, 2.6, 3.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d85mk"]
+size = Vector3(16.281, 2.6, 15.732)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bpion"]
+material = SubResource("StandardMaterial3D_73xy2")
+size = Vector3(16.281, 2.6, 15.732)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o7xfi"]
+size = Vector3(1, 1, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r2fo8"]
+material = SubResource("StandardMaterial3D_73xy2")
+size = Vector3(1, 1, 6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ltaha"]
+size = Vector3(1, 1, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tq1d0"]
+material = SubResource("StandardMaterial3D_73xy2")
+size = Vector3(1, 1, 6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_egyxa"]
+size = Vector3(1, 1, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mlolt"]
+material = SubResource("StandardMaterial3D_73xy2")
+size = Vector3(1, 1, 6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fpf2v"]
+size = Vector3(1, 1, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rpbec"]
+material = SubResource("StandardMaterial3D_73xy2")
+size = Vector3(1, 1, 6)
 
 [node name="Kitchen" type="Node3D"]
 
@@ -904,9 +957,105 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9494, 0.934445, -1.36997)
 [node name="LabeledCan" parent="." instance=ExtResource("19_s3sob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69715, 2.73646, 4.48757)
 
+[node name="Shadows" type="Node3D" parent="."]
+
+[node name="SinkShadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6601, 0, 0)
+
+[node name="Area3D" parent="Shadows/SinkShadow" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.38595, 0)
+
+[node name="CollisionShape3D" parent="Shadows/SinkShadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_fgfe1")
+
+[node name="MeshInstance3D" parent="Shadows/SinkShadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_787uc")
+
+[node name="LowerShelfShadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5929, 4.33604, -5.19258)
+
+[node name="Area3D" parent="Shadows/LowerShelfShadow" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38995, 0.727035, -1.00059)
+
+[node name="CollisionShape3D" parent="Shadows/LowerShelfShadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_e46oi")
+
+[node name="MeshInstance3D" parent="Shadows/LowerShelfShadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_frae5")
+
+[node name="UpperShelfShadow2" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.61228, 6.32001, -5.19258)
+
+[node name="Area3D" parent="Shadows/UpperShelfShadow2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38995, 0.727035, -1.00059)
+
+[node name="CollisionShape3D" parent="Shadows/UpperShelfShadow2/Area3D" index="0"]
+shape = SubResource("BoxShape3D_e46oi")
+
+[node name="MeshInstance3D" parent="Shadows/UpperShelfShadow2/Area3D" index="1"]
+mesh = SubResource("BoxMesh_frae5")
+
+[node name="SquirrelRoomShadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+
+[node name="Area3D" parent="Shadows/SquirrelRoomShadow" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203, 0.653, 4.849)
+
+[node name="CollisionShape3D" parent="Shadows/SquirrelRoomShadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_d85mk")
+
+[node name="MeshInstance3D" parent="Shadows/SquirrelRoomShadow/Area3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6035, 1.06618, -5.21895)
+mesh = SubResource("BoxMesh_bpion")
+
+[node name="Door1Shadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+
+[node name="Area3D" parent="Shadows/Door1Shadow" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.5135, -1.94258)
+
+[node name="CollisionShape3D" parent="Shadows/Door1Shadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_o7xfi")
+
+[node name="MeshInstance3D" parent="Shadows/Door1Shadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_r2fo8")
+
+[node name="Door2Shadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.503, 12.4891, -4.36525)
+
+[node name="CollisionShape3D" parent="Shadows/Door2Shadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_ltaha")
+
+[node name="MeshInstance3D" parent="Shadows/Door2Shadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_tq1d0")
+
+[node name="Door3Shadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.6338, -3.60033)
+
+[node name="CollisionShape3D" parent="Shadows/Door3Shadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_egyxa")
+
+[node name="MeshInstance3D" parent="Shadows/Door3Shadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_mlolt")
+
+[node name="Door4Shadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4996, 18.8433, 0)
+
+[node name="CollisionShape3D" parent="Shadows/Door4Shadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_fpf2v")
+
+[node name="MeshInstance3D" parent="Shadows/Door4Shadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_rpbec")
+
 [editable path="leader_squirrel"]
 [editable path="squirrel"]
 [editable path="squirrel2"]
 [editable path="hideout"]
 [editable path="posters"]
 [editable path="posters2"]
+[editable path="Shadows/SinkShadow"]
+[editable path="Shadows/LowerShelfShadow"]
+[editable path="Shadows/UpperShelfShadow2"]
+[editable path="Shadows/SquirrelRoomShadow"]
+[editable path="Shadows/Door1Shadow"]
+[editable path="Shadows/Door2Shadow"]
+[editable path="Shadows/Door3Shadow"]
+[editable path="Shadows/Door4Shadow"]
