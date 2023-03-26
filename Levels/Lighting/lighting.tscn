@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Levels/Lighting/lighting.gd" id="1_ikudq"]
 [ext_resource type="Texture2D" uid="uid://bh4iyx36onawj" path="res://UI/Assets/DialougBox.png" id="2_fem2n"]
 [ext_resource type="FontFile" uid="uid://b3u35yfgodov6" path="res://Fonts/Montserrat-Medium.ttf" id="3_p72l0"]
-[ext_resource type="Texture2D" uid="uid://tb65svyj6j6c" path="res://UI/Assets/Squirrel.png" id="4_an0wa"]
+[ext_resource type="Texture2D" uid="uid://cyfw7737vpi3h" path="res://UI/Assets/leaderfacesmall.png" id="4_dlpfv"]
 
 [node name="Lighting" type="Node3D"]
 script = ExtResource("1_ikudq")
@@ -77,7 +77,7 @@ offset_left = 4.0
 offset_top = 4.0
 offset_right = 82.0
 offset_bottom = 85.0
-texture = ExtResource("4_an0wa")
+texture = ExtResource("4_dlpfv")
 
 [connection signal="timeout" from="RandomTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="InbetweenTimer" to="." method="_on_inbetween_timer_timeout"]
