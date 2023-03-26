@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://bki4fkrlbq8ku"]
+
+[ext_resource type="PackedScene" uid="uid://d1ugdvfhruukt" path="res://Entities/Player/leader_squirrel.glb" id="1_buh5d"]
+[ext_resource type="Script" path="res://Entities/Player/leader_squirrel.gd" id="2_2nx8a"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6kdtj"]
+animation = &"bored"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vrqv7"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uw7mc"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xji05"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"bored"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gtey4"]
+xfade_time = 0.1
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_6qwn8"]
+states/End/position = Vector2(1159.33, 114.889)
+states/Start/position = Vector2(180.667, 113.704)
+states/bored/node = SubResource("AnimationNodeAnimation_6kdtj")
+states/bored/position = Vector2(459.252, 237.334)
+states/idle/node = SubResource("AnimationNodeAnimation_vrqv7")
+states/idle/position = Vector2(458.667, 115.333)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_uw7mc"), "idle", "bored", SubResource("AnimationNodeStateMachineTransition_xji05"), "bored", "idle", SubResource("AnimationNodeStateMachineTransition_gtey4")]
+graph_offset = Vector2(141, 29)
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_svvq5"]
+
+[node name="leader_squirrel" instance=ExtResource("1_buh5d")]
+script = ExtResource("2_2nx8a")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/2/rotation = Quaternion(-0.00239377, 0.0660255, 0.162785, 0.984447)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_6qwn8")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_svvq5")
+parameters/conditions/bored = false

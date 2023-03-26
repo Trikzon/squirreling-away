@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bh131xjgippe2"]
+[gd_scene load_steps=14 format=3 uid="uid://bh131xjgippe2"]
 
 [ext_resource type="PackedScene" uid="uid://bsq6kupgh27i2" path="res://Entities/Player/player.tscn" id="1_mkk37"]
 [ext_resource type="Script" path="res://Levels/dev_level.gd" id="1_u8lsh"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bjgs4lviks30u" path="res://Entities/Pushable/meshes/matches.glb" id="7_nno14"]
 [ext_resource type="PackedScene" uid="uid://duishmotm0u5g" path="res://Entities/Pushable/meshes/radio.glb" id="8_lfeyp"]
 [ext_resource type="PackedScene" uid="uid://cnruwm4o3rrqx" path="res://Entities/Pushable/meshes/spray.glb" id="9_wnjvm"]
+[ext_resource type="PackedScene" uid="uid://bki4fkrlbq8ku" path="res://Entities/Player/leader_squirrel.tscn" id="10_j5qw7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne04s"]
 albedo_color = Color(0.291886, 0.331853, 0.396783, 1)
@@ -79,5 +80,8 @@ transform = Transform3D(0.0479782, 0, -0.998848, 0, 1, 0, 0.998848, 0, 0.0479782
 
 [node name="spray" parent="." instance=ExtResource("9_wnjvm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97147, 0.144035, 1.13475)
+
+[node name="leader_squirrel" parent="." instance=ExtResource("10_j5qw7")]
+transform = Transform3D(-0.901606, 0, 0.432558, 0, 1, 0, -0.432558, 0, -0.901606, -6.9652, 0, -10.4172)
 
 [connection signal="win" from="WinCond" to="." method="_on_win_cond_win"]

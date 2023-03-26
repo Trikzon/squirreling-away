@@ -28,6 +28,16 @@ collision_mask = 4
 [node name="hamster_walk_2" parent="." instance=ExtResource("2_gpqi1")]
 transform = Transform3D(-1.35942e-08, 0, 0.311, 0, 0.311, 0, -0.311, 0, -1.35942e-08, 0, -0.972, 0)
 
+[node name="Skeleton3D" parent="hamster_walk_2/Armature" index="0"]
+bones/1/rotation = Quaternion(0.0670222, 0.536411, 0.114108, 0.833517)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/9/scale = Vector3(1, 1, 1)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/scale = Vector3(1, 1, 1)
+bones/15/rotation = Quaternion(-0.411877, -0.0707257, 0.908208, 0.0226441)
+bones/15/scale = Vector3(1, 1, 0.999997)
+
 [node name="AnimationTree" parent="hamster_walk_2" index="2"]
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_yxgu3")
 parameters/walk/TimeScale/scale = 1.0

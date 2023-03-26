@@ -34,7 +34,6 @@ node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uw7mc"]
 advance_mode = 2
-advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0s1i6"]
 xfade_time = 0.1
@@ -135,23 +134,16 @@ graph_offset = Vector2(80, -143)
 script = ExtResource("2_ra5t8")
 
 [node name="Skeleton3D" parent="Armature" index="0"]
-bones/1/rotation = Quaternion(0.0670222, 0.536411, 0.114108, 0.833517)
-bones/1/scale = Vector3(1, 1, 1)
-bones/2/rotation = Quaternion(-0.00239378, 0.0660255, 0.162785, 0.984447)
-bones/2/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(-0.00239377, 0.0660255, 0.162785, 0.984447)
 bones/5/rotation = Quaternion(0.732947, 0.0431837, 0.0858947, 0.673459)
-bones/6/rotation = Quaternion(-0.308684, -0.477363, 0.145031, 0.809818)
-bones/7/rotation = Quaternion(0.0583143, 0.164156, 0.258384, 0.950205)
-bones/8/rotation = Quaternion(0.202257, 0.0373902, 0.0573629, 0.976936)
+bones/6/rotation = Quaternion(0.490546, 0.000426751, 0.234921, 0.839152)
+bones/7/rotation = Quaternion(0.0617058, 0.00297668, 0.0356746, 0.997452)
+bones/8/rotation = Quaternion(0.139442, -4.19095e-08, 0.0581498, 0.988521)
 bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
-bones/9/scale = Vector3(1, 1, 1)
-bones/10/rotation = Quaternion(-0.0182949, 0.331325, 0.590298, 0.735824)
-bones/11/rotation = Quaternion(-0.0135159, 0.0651251, -0.0858244, 0.994088)
+bones/10/rotation = Quaternion(-0.403566, -0.24723, -0.379148, 0.795147)
+bones/11/rotation = Quaternion(-0.0813467, -0.000239681, -0.0330587, 0.996137)
+bones/12/rotation = Quaternion(-0.132802, -0.0154302, -0.0720365, 0.988401)
 bones/13/rotation = Quaternion(0.379298, -0.0124702, 0.921156, -0.086306)
-bones/13/scale = Vector3(1, 1, 1)
-bones/14/scale = Vector3(1, 1, 1)
-bones/15/rotation = Quaternion(-0.411877, -0.0707257, 0.908208, 0.0226441)
-bones/15/scale = Vector3(1, 1, 0.999997)
 bones/16/rotation = Quaternion(0.678195, -0.120342, 0.424293, 0.58783)
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
