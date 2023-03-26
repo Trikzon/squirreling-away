@@ -3,17 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbqsxvdc8eybv"
-path.s3tc="res://.godot/imported/radio_radio.png-73c5b4b1db5b6a8b10199f9e54dac38b.s3tc.ctex"
+path.etc2="res://.godot/imported/radio_radio.png-ed10009d68dbc7d46a545c7ed923319c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
 
 [deps]
 
-source_file="res://Entities/Pushable/meshes/radio_radio.png"
-dest_files=["res://.godot/imported/radio_radio.png-73c5b4b1db5b6a8b10199f9e54dac38b.s3tc.ctex"]
+source_file="res://Entities/Pushable/Meshes/radio_radio.png"
+dest_files=["res://.godot/imported/radio_radio.png-ed10009d68dbc7d46a545c7ed923319c.etc2.ctex"]
 
 [params]
 

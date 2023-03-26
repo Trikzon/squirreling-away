@@ -5,16 +5,17 @@
 [ext_resource type="FontFile" uid="uid://b3u35yfgodov6" path="res://Fonts/Montserrat-Medium.ttf" id="3_p72l0"]
 [ext_resource type="Texture2D" uid="uid://tb65svyj6j6c" path="res://UI/Assets/Squirrel.png" id="4_an0wa"]
 
-[node name="Lighting" type="Node"]
+[node name="Lighting" type="Node3D"]
 script = ExtResource("1_ikudq")
 
 [node name="Light" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+transform = Transform3D(1, -4.96191e-16, 3.16108e-16, 3.16108e-16, 0.906308, 0.422618, -4.96191e-16, -0.422618, 0.906308, 0, 0, 0)
 light_energy = 0.25
 shadow_enabled = true
 
 [node name="Spotlight" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.524387, 0.85148, 0, -0.85148, 0.524387, 2.1581, 16.6399, 31.0785)
+shadow_enabled = true
 spot_range = 4096.0
 spot_attenuation = 0.0473661
 

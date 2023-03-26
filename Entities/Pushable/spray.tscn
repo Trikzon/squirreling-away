@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://qkh4m8nnl2n5"]
+
+[ext_resource type="Script" path="res://Entities/Pushable/pushable.gd" id="1_dbou4"]
+[ext_resource type="PackedScene" uid="uid://cnruwm4o3rrqx" path="res://Entities/Pushable/Meshes/spray.glb" id="2_pp53m"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ynj8i"]
+height = 2.75
+
+[node name="Spray" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_dbou4")
+
+[node name="spray" parent="." instance=ExtResource("2_pp53m")]
+transform = Transform3D(-4.37114e-08, -3.48787e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48787e-16, -4.37114e-08, 2.08165e-12, -1.25, 2.08165e-12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_ynj8i")
+
+[node name="FreezeTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="FreezeTimer" to="." method="_on_timer_timeout"]

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c3oog7sjik6lw"
-path="res://.godot/imported/sink.glb-af210f51b09971a88556eea4ae14eed3.scn"
+uid="uid://cj2wvdjmyqoq1"
+path="res://.godot/imported/toaster.glb-b63340585b2ccea1c95e86303eb4db16.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/meshes/sink.glb"
-dest_files=["res://.godot/imported/sink.glb-af210f51b09971a88556eea4ae14eed3.scn"]
+source_file="res://Entities/Static/Meshes/toaster.glb"
+dest_files=["res://.godot/imported/toaster.glb-b63340585b2ccea1c95e86303eb4db16.scn"]
 
 [params]
 
