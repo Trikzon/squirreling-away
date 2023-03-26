@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://d4c0ytxt47vsi"]
+[gd_scene load_steps=130 format=3 uid="uid://d4c0ytxt47vsi"]
 
 [ext_resource type="PackedScene" uid="uid://bahsd6t604ygh" path="res://Entities/Static/sink.tscn" id="2_f4jxx"]
 [ext_resource type="Material" uid="uid://cusifduxx017h" path="res://Levels/counter_wood.tres" id="2_sv52j"]
@@ -11,20 +11,20 @@
 [ext_resource type="PackedScene" uid="uid://cgntg1dsvl31q" path="res://Entities/Static/toaster.tscn" id="10_on6se"]
 [ext_resource type="PackedScene" uid="uid://bki4fkrlbq8ku" path="res://Entities/Player/leader_squirrel.tscn" id="15_up8fo"]
 [ext_resource type="PackedScene" uid="uid://cokc7hrek652b" path="res://Entities/Player/squirrel.tscn" id="16_bj8wv"]
-[ext_resource type="PackedScene" uid="uid://edr4jcn83wbi" path="res://Entities/Static/bowl.tscn" id="17_ybe8r"]
-[ext_resource type="PackedScene" path="res://Entities/Static/candle.tscn" id="18_0eqw7"]
+[ext_resource type="PackedScene" uid="uid://ch20fang6f6nd" path="res://Entities/Static/bowl.tscn" id="17_ybe8r"]
+[ext_resource type="PackedScene" uid="uid://bsbmsypylsgde" path="res://Entities/Static/candle.tscn" id="18_0eqw7"]
 [ext_resource type="PackedScene" uid="uid://cnfmmalqsktpk" path="res://Levels/hideout.glb" id="18_02k5b"]
-[ext_resource type="PackedScene" path="res://Entities/Static/knife_block.tscn" id="18_436h5"]
+[ext_resource type="PackedScene" uid="uid://1isl8ttghjt2" path="res://Entities/Static/knife_block.tscn" id="18_436h5"]
 [ext_resource type="PackedScene" uid="uid://dhux0b18ltemy" path="res://Levels/posters.glb" id="19_rhak3"]
-[ext_resource type="PackedScene" path="res://Entities/Static/cutting_board.tscn" id="19_rnjrv"]
-[ext_resource type="PackedScene" path="res://Zones/shadow_protection.tscn" id="20_26rbk"]
+[ext_resource type="PackedScene" uid="uid://cspi22lrp4xb0" path="res://Entities/Static/cutting_board.tscn" id="19_rnjrv"]
+[ext_resource type="PackedScene" uid="uid://daewciwopihju" path="res://Zones/shadow_protection.tscn" id="20_26rbk"]
 [ext_resource type="Texture2D" uid="uid://kuan6gtslipf" path="res://Levels/posters_poster.png" id="20_63r8b"]
 [ext_resource type="PackedScene" uid="uid://drkdjp0xen7l1" path="res://Entities/Pushable/coffee_cup.tscn" id="21_cb772"]
-[ext_resource type="PackedScene" path="res://Entities/Static/plate.tscn" id="21_sx7yh"]
-[ext_resource type="PackedScene" path="res://Entities/Pushable/pepper.tscn" id="22_edpk5"]
-[ext_resource type="PackedScene" path="res://Entities/Pushable/salt.tscn" id="23_0tl7i"]
-[ext_resource type="PackedScene" path="res://Entities/Static/microwave.tscn" id="24_m4gsj"]
-[ext_resource type="PackedScene" path="res://Entities/Pushable/cereal.tscn" id="25_7xdfb"]
+[ext_resource type="PackedScene" uid="uid://bjsomtcv8mmaj" path="res://Entities/Static/plate.tscn" id="21_sx7yh"]
+[ext_resource type="PackedScene" uid="uid://dgppg2fwlew17" path="res://Entities/Pushable/pepper.tscn" id="22_edpk5"]
+[ext_resource type="PackedScene" uid="uid://cubj1rn2mwr20" path="res://Entities/Pushable/salt.tscn" id="23_0tl7i"]
+[ext_resource type="PackedScene" uid="uid://cbww6mg5qw7h7" path="res://Entities/Static/microwave.tscn" id="24_m4gsj"]
+[ext_resource type="PackedScene" uid="uid://dwwmycplvo878" path="res://Entities/Pushable/cereal.tscn" id="25_7xdfb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ry4p0"]
 material = ExtResource("2_sv52j")
@@ -297,14 +297,14 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fum7d")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fgfe1"]
-size = Vector3(15, 2, 10)
+size = Vector3(15, 5.51505, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_73xy2"]
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_787uc"]
 material = SubResource("StandardMaterial3D_73xy2")
-size = Vector3(15, 2, 10)
+size = Vector3(15, 5.515, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e46oi"]
 size = Vector3(10, 2.6, 3.4)
@@ -347,6 +347,58 @@ size = Vector3(1, 1, 6)
 [sub_resource type="BoxMesh" id="BoxMesh_rpbec"]
 material = SubResource("StandardMaterial3D_73xy2")
 size = Vector3(1, 1, 6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7ngx"]
+size = Vector3(10.5222, 2.49604, 5.73749)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6g4u6"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fqmw3"]
+material = SubResource("StandardMaterial3D_6g4u6")
+size = Vector3(10.522, 2.496, 5.737)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aqh4e"]
+size = Vector3(6, 1, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sjavu"]
+material = SubResource("StandardMaterial3D_6g4u6")
+size = Vector3(6, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ye1r"]
+size = Vector3(4, 1, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vtbg4"]
+material = SubResource("StandardMaterial3D_6g4u6")
+size = Vector3(4, 1, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_63ota"]
+size = Vector3(6.5, 1, 11)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r5um3"]
+material = SubResource("StandardMaterial3D_6g4u6")
+size = Vector3(6.5, 1, 11)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_34d4f"]
+size = Vector3(7, 1, 9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iw8cy"]
+material = SubResource("StandardMaterial3D_6g4u6")
+size = Vector3(7, 1, 9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_56qei"]
+size = Vector3(7, 1, 9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tubla"]
+material = SubResource("StandardMaterial3D_6g4u6")
+size = Vector3(7, 1, 9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n2awp"]
+size = Vector3(7, 1, 9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ibjo"]
+material = SubResource("StandardMaterial3D_6g4u6")
+size = Vector3(7, 1, 9)
 
 [node name="Kitchen" type="Node3D"]
 
@@ -1012,6 +1064,78 @@ shape = SubResource("BoxShape3D_fpf2v")
 [node name="MeshInstance3D" parent="Shadows/Door4Shadow/Area3D" index="1"]
 mesh = SubResource("BoxMesh_rpbec")
 
+[node name="MicrowaveShadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.157, 0.80265, -5.37166)
+
+[node name="CollisionShape3D" parent="Shadows/MicrowaveShadow/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36921, 0.846586, 0.320166)
+shape = SubResource("BoxShape3D_j7ngx")
+
+[node name="MeshInstance3D" parent="Shadows/MicrowaveShadow/Area3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42444, 0.868109, 0.312525)
+mesh = SubResource("BoxMesh_fqmw3")
+
+[node name="BowlShadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37969, 0.70872, -4.1916)
+
+[node name="Area3D" parent="Shadows/BowlShadow" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.435668, 0.0236951, -0.190573)
+
+[node name="CollisionShape3D" parent="Shadows/BowlShadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_aqh4e")
+
+[node name="MeshInstance3D" parent="Shadows/BowlShadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_sjavu")
+
+[node name="KnifeShadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+
+[node name="Area3D" parent="Shadows/KnifeShadow" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43291, 0.648041, -6.37842)
+
+[node name="CollisionShape3D" parent="Shadows/KnifeShadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_7ye1r")
+
+[node name="MeshInstance3D" parent="Shadows/KnifeShadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_vtbg4")
+
+[node name="BlenderShadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3193, 0.488716, -2.25569)
+
+[node name="CollisionShape3D" parent="Shadows/BlenderShadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_63ota")
+
+[node name="MeshInstance3D" parent="Shadows/BlenderShadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_r5um3")
+
+[node name="Bowl1Shadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.68768, 13.0319, -4.38488)
+
+[node name="CollisionShape3D" parent="Shadows/Bowl1Shadow/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.647313)
+shape = SubResource("BoxShape3D_34d4f")
+
+[node name="MeshInstance3D" parent="Shadows/Bowl1Shadow/Area3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.650795)
+mesh = SubResource("BoxMesh_iw8cy")
+
+[node name="Bowl2Shadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96562, 18.9046, -3.25744)
+
+[node name="CollisionShape3D" parent="Shadows/Bowl2Shadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_56qei")
+
+[node name="MeshInstance3D" parent="Shadows/Bowl2Shadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_tubla")
+
+[node name="Bowl3Shadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.8802, -3.60274)
+
+[node name="CollisionShape3D" parent="Shadows/Bowl3Shadow/Area3D" index="0"]
+shape = SubResource("BoxShape3D_n2awp")
+
+[node name="MeshInstance3D" parent="Shadows/Bowl3Shadow/Area3D" index="1"]
+mesh = SubResource("BoxMesh_4ibjo")
+
 [node name="Bowl" parent="." instance=ExtResource("17_ybe8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04141, 0.500002, 0.416599)
 
@@ -1107,3 +1231,10 @@ transform = Transform3D(-0.0121995, 0, -0.999926, 0, 1, 0, 0.999926, 0, -0.01219
 [editable path="Shadows/Door2Shadow"]
 [editable path="Shadows/Door3Shadow"]
 [editable path="Shadows/Door4Shadow"]
+[editable path="Shadows/MicrowaveShadow"]
+[editable path="Shadows/BowlShadow"]
+[editable path="Shadows/KnifeShadow"]
+[editable path="Shadows/BlenderShadow"]
+[editable path="Shadows/Bowl1Shadow"]
+[editable path="Shadows/Bowl2Shadow"]
+[editable path="Shadows/Bowl3Shadow"]
