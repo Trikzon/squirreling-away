@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crn622a0mxu1f"
-path="res://.godot/imported/poweredby_mediawiki_88x31.png-bb456b8865aebf5e46a46d44c90d808e.ctex"
+uid="uid://du0v8vwqme24g"
+path="res://.godot/imported/Gnome-emblem-web.svg.webp-3063e7d1f79c63a86b1678f076653171.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/File_Grey squirrel.png - Wikimedia Commons_files/poweredby_mediawiki_88x31.png"
-dest_files=["res://.godot/imported/poweredby_mediawiki_88x31.png-bb456b8865aebf5e46a46d44c90d808e.ctex"]
+source_file="res://UI/Assets/File_Grey squirrel.png - Wikimedia Commons_files/Gnome-emblem-web.svg.webp"
+dest_files=["res://.godot/imported/Gnome-emblem-web.svg.webp-3063e7d1f79c63a86b1678f076653171.ctex"]
 
 [params]
 

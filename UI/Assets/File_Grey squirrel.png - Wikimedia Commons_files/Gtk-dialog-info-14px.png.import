@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2260ccyiges3"
-path="res://.godot/imported/DialougBox.png-0e730e28fdec7a287151a7f3f9e07159.ctex"
+uid="uid://dh3ejk5dr5xon"
+path="res://.godot/imported/Gtk-dialog-info-14px.png-f94d7ca15bd83317e25e7858bf97c994.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/DialougBox.png"
-dest_files=["res://.godot/imported/DialougBox.png-0e730e28fdec7a287151a7f3f9e07159.ctex"]
+source_file="res://UI/Assets/File_Grey squirrel.png - Wikimedia Commons_files/Gtk-dialog-info-14px.png"
+dest_files=["res://.godot/imported/Gtk-dialog-info-14px.png-f94d7ca15bd83317e25e7858bf97c994.ctex"]
 
 [params]
 

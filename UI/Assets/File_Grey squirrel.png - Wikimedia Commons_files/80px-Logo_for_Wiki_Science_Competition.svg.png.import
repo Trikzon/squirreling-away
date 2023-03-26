@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du0v8vwqme24g"
-path="res://.godot/imported/Gnome-emblem-web.svg.webp-1484d494447f8b8fa15f0492fbff4390.ctex"
+uid="uid://dwud1m6ekejf0"
+path="res://.godot/imported/80px-Logo_for_Wiki_Science_Competition.svg.png-498d70a31674224a6e4e4324a94d8c43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/File_Grey squirrel.png - Wikimedia Commons_files/Gnome-emblem-web.svg.webp"
-dest_files=["res://.godot/imported/Gnome-emblem-web.svg.webp-1484d494447f8b8fa15f0492fbff4390.ctex"]
+source_file="res://UI/Assets/File_Grey squirrel.png - Wikimedia Commons_files/80px-Logo_for_Wiki_Science_Competition.svg.png"
+dest_files=["res://.godot/imported/80px-Logo_for_Wiki_Science_Competition.svg.png-498d70a31674224a6e4e4324a94d8c43.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca4hrli21ptx8"
-path="res://.godot/imported/wikimedia-button.png-b76cbcb134152415bdd5a37a7c5ff8ca.ctex"
+uid="uid://tb65svyj6j6c"
+path="res://.godot/imported/Squirrel.png-712af03c9dda3550daba2bebae44f596.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/File_Grey squirrel.png - Wikimedia Commons_files/wikimedia-button.png"
-dest_files=["res://.godot/imported/wikimedia-button.png-b76cbcb134152415bdd5a37a7c5ff8ca.ctex"]
+source_file="res://UI/Assets/Squirrel.png"
+dest_files=["res://.godot/imported/Squirrel.png-712af03c9dda3550daba2bebae44f596.ctex"]
 
 [params]
 
