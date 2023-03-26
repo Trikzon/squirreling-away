@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://biugwynr6dy8e"]
+[gd_scene load_steps=4 format=3 uid="uid://d26vw02qeiimf"]
 
 [ext_resource type="Script" path="res://Levels/day.gd" id="1_kymc7"]
 [ext_resource type="PackedScene" uid="uid://d4c0ytxt47vsi" path="res://Levels/kitchen.tscn" id="1_q568j"]
+[ext_resource type="PackedScene" uid="uid://ca1iodagghqn2" path="res://Entities/Pushable/apple.tscn" id="3_kcg6e"]
 
 [node name="Day1" type="Node3D"]
 script = ExtResource("1_kymc7")
 
 [node name="Kitchen" parent="." instance=ExtResource("1_q568j")]
+
+[node name="Apple" parent="." instance=ExtResource("3_kcg6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.28398, 1.30612, -2.67524)

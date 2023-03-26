@@ -2,6 +2,10 @@ extends Node
 
 @onready var DAY_0_TSCN = preload("res://Levels/day_0.tscn")
 @onready var DAY_1_TSCN = preload("res://Levels/day_1.tscn")
+@onready var DAY_2_TSCN = preload("res://Levels/day_2.tscn")
+#@onready var DAY_3_TSCN = preload("res://Levels/day_3.tscn")
+#@onready var DAY_4_TSCN = preload("res://Levels/day_4.tscn")
+#@onready var DAY_5_TSCN = preload("res://Levels/day_5.tscn")
 
 const OBJECTIVE_NAMES: Array[String] = ["", "Apple", "Radio", "PepperSpray", "MatchBox", "HulaGirl"]
 
@@ -13,6 +17,7 @@ var day = -1
 func _ready():
     $ScoreTimer.start()
     next_day()
+    
     
 
 func _on_dev_level_win():
@@ -26,6 +31,10 @@ func next_day():
     match day:
         0: level_node = DAY_0_TSCN.instantiate()
         1: level_node = DAY_1_TSCN.instantiate()
+        2: level_node = DAY_2_TSCN.instantiate()
+#        3: level_node = DAY_3_TSCN.instantiate()
+#        4: level_node = DAY_4_TSCN.instantiate()
+#        5: level_node = DAY_5_TSCN.instantiate()
         _: print("Error: No level file for day ", day)
     level_node.init(OBJECTIVE_NAMES[day])
     add_child(level_node)
