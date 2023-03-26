@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://j261jiswgead"]
+
+[ext_resource type="Script" path="res://Levels/Lighting/lighting.gd" id="1_ikudq"]
+
+[node name="Lighting" type="Node"]
+script = ExtResource("1_ikudq")
+
+[node name="Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+light_energy = 0.25
+shadow_enabled = true
+
+[node name="Spotlight" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.524387, 0.85148, 0, -0.85148, 0.524387, 2.1581, 16.6399, 31.0785)
+spot_range = 4096.0
+spot_attenuation = 0.0473661
+
+[node name="RandomTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="InbetweenTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="HideTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="RandomTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="InbetweenTimer" to="." method="_on_inbetween_timer_timeout"]
+[connection signal="timeout" from="HideTimer" to="." method="_on_hide_timer_timeout"]

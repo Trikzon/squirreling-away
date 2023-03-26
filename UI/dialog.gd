@@ -1,5 +1,5 @@
 extends Control
-
+var root_node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -7,6 +7,8 @@ func _ready():
     play()
     $NinePatchRect/BodyText.text = "Your mission today soldier is to hunt down the book we need to learn thier secrets"
     $NinePatchRect2/Speaker.text = "Fidel Squeaker"
+    root_node=get_tree().root.get_child(0)
+    
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
