@@ -121,6 +121,7 @@ text = "
 [b]        You Died. Game Over[/b]"
 
 [node name="GameOverRestartButton" type="Button" parent="GameOverScreen"]
+layout_mode = 0
 offset_left = 483.0
 offset_top = 196.0
 offset_right = 694.0
@@ -128,6 +129,7 @@ offset_bottom = 321.0
 text = "Restart Day"
 
 [node name="GameOverQuitButton" type="Button" parent="GameOverScreen"]
+layout_mode = 0
 offset_left = 483.0
 offset_top = 342.0
 offset_right = 694.0
@@ -135,6 +137,7 @@ offset_bottom = 467.0
 text = "Quit Game"
 
 [node name="WinScreen" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 427.0
@@ -157,6 +160,7 @@ text = "
 [b]                 You Won![/b]"
 
 [node name="WinNextDayButton" type="Button" parent="WinScreen"]
+layout_mode = 0
 offset_left = 483.0
 offset_top = 196.0
 offset_right = 694.0
@@ -164,8 +168,12 @@ offset_bottom = 321.0
 text = "Next Day"
 
 [node name="WinQuitButton" type="Button" parent="WinScreen"]
+layout_mode = 0
 offset_left = 483.0
 offset_top = 342.0
 offset_right = 694.0
 offset_bottom = 467.0
 text = "Quit Game"
+
+[connection signal="finish_speaking" from="Dialog" to="." method="_on_dialog_finish_speaking"]
+[connection signal="visibility_changed" from="Dialog" to="Dialog" method="_on_visibility_changed"]

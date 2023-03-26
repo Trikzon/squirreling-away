@@ -1,16 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl10xjdggndyt"]
+[gd_scene load_steps=3 format=3 uid="uid://dl10xjdggndyt"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_js0ba"]
-[ext_resource type="PackedScene" uid="uid://d4c0ytxt47vsi" path="res://Levels/kitchen.tscn" id="3_vbrw4"]
 [ext_resource type="PackedScene" uid="uid://cx2368v2jrve8" path="res://UI/ui.tscn" id="3_yldc6"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_js0ba")
 
 [node name="UI" parent="." instance=ExtResource("3_yldc6")]
+process_mode = 3
 
 [node name="ScoreTimer" type="Timer" parent="."]
 
-[node name="Kitchen" parent="." instance=ExtResource("3_vbrw4")]
+[node name="BeginningPhysicsTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
+[connection signal="finish_speaking" from="UI" to="." method="_on_ui_finish_speaking"]
 [connection signal="timeout" from="ScoreTimer" to="UI" method="_on_score_timer_timeout"]
+[connection signal="timeout" from="BeginningPhysicsTimer" to="." method="_on_beginning_physics_timer_timeout"]

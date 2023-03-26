@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://biugwynr6dy8e"]
+
+[ext_resource type="Script" path="res://Levels/day.gd" id="1_kymc7"]
+[ext_resource type="PackedScene" uid="uid://d4c0ytxt47vsi" path="res://Levels/kitchen.tscn" id="1_q568j"]
+
+[node name="Day1" type="Node3D"]
+script = ExtResource("1_kymc7")
+
+[node name="Kitchen" parent="." instance=ExtResource("1_q568j")]

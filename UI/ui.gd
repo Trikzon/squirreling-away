@@ -1,18 +1,17 @@
 extends Control
 var score=0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-    pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-    pass
+signal finish_speaking
 
 func _on_score_timer_timeout():
     score+=1
     $ScoreLabel.text = "Score: %s" % score
+
+func enableDialog(day, objective):
+    $Dialog.show()
+    $ScoreLabel.hide()
+    $RichTextLabel2.hide()
+    $RichTextLabel2.text = "Day %s Objective:\nFind [b]%s[/b]" % [day, objective]
     
 func enableStartScreen():
     $StartScreen.show()
@@ -28,3 +27,8 @@ func enableWinScreen():
     $StartScreen.hide()
     $GameOverScreen.hide()
     $WinScreen.show()
+
+func _on_dialog_finish_speaking():
+    finish_speaking.emit()
+    $ScoreLabel.show()
+    $RichTextLabel2.show()
