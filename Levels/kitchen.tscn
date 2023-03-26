@@ -12,19 +12,19 @@
 [ext_resource type="PackedScene" uid="uid://bki4fkrlbq8ku" path="res://Entities/Player/leader_squirrel.tscn" id="15_up8fo"]
 [ext_resource type="PackedScene" uid="uid://cokc7hrek652b" path="res://Entities/Player/squirrel.tscn" id="16_bj8wv"]
 [ext_resource type="PackedScene" uid="uid://ch20fang6f6nd" path="res://Entities/Static/bowl.tscn" id="17_ybe8r"]
-[ext_resource type="PackedScene" uid="uid://bsbmsypylsgde" path="res://Entities/Static/candle.tscn" id="18_0eqw7"]
+[ext_resource type="PackedScene" path="res://Entities/Static/candle.tscn" id="18_0eqw7"]
 [ext_resource type="PackedScene" uid="uid://cnfmmalqsktpk" path="res://Levels/hideout.glb" id="18_02k5b"]
-[ext_resource type="PackedScene" uid="uid://1isl8ttghjt2" path="res://Entities/Static/knife_block.tscn" id="18_436h5"]
+[ext_resource type="PackedScene" path="res://Entities/Static/knife_block.tscn" id="18_436h5"]
 [ext_resource type="PackedScene" uid="uid://dhux0b18ltemy" path="res://Levels/posters.glb" id="19_rhak3"]
-[ext_resource type="PackedScene" uid="uid://cspi22lrp4xb0" path="res://Entities/Static/cutting_board.tscn" id="19_rnjrv"]
+[ext_resource type="PackedScene" path="res://Entities/Static/cutting_board.tscn" id="19_rnjrv"]
 [ext_resource type="PackedScene" uid="uid://daewciwopihju" path="res://Zones/shadow_protection.tscn" id="20_26rbk"]
 [ext_resource type="Texture2D" uid="uid://kuan6gtslipf" path="res://Levels/posters_poster.png" id="20_63r8b"]
 [ext_resource type="PackedScene" uid="uid://drkdjp0xen7l1" path="res://Entities/Pushable/coffee_cup.tscn" id="21_cb772"]
-[ext_resource type="PackedScene" uid="uid://bjsomtcv8mmaj" path="res://Entities/Static/plate.tscn" id="21_sx7yh"]
-[ext_resource type="PackedScene" uid="uid://dgppg2fwlew17" path="res://Entities/Pushable/pepper.tscn" id="22_edpk5"]
-[ext_resource type="PackedScene" uid="uid://cubj1rn2mwr20" path="res://Entities/Pushable/salt.tscn" id="23_0tl7i"]
-[ext_resource type="PackedScene" uid="uid://cbww6mg5qw7h7" path="res://Entities/Static/microwave.tscn" id="24_m4gsj"]
-[ext_resource type="PackedScene" uid="uid://dwwmycplvo878" path="res://Entities/Pushable/cereal.tscn" id="25_7xdfb"]
+[ext_resource type="PackedScene" path="res://Entities/Static/plate.tscn" id="21_sx7yh"]
+[ext_resource type="PackedScene" path="res://Entities/Pushable/pepper.tscn" id="22_edpk5"]
+[ext_resource type="PackedScene" path="res://Entities/Pushable/salt.tscn" id="23_0tl7i"]
+[ext_resource type="PackedScene" path="res://Entities/Static/microwave.tscn" id="24_m4gsj"]
+[ext_resource type="PackedScene" path="res://Entities/Pushable/cereal.tscn" id="25_7xdfb"]
 [ext_resource type="PackedScene" uid="uid://b0pxgnxtvjrml" path="res://Zones/WinCod/win_cond.tscn" id="26_4iswk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ry4p0"]
@@ -421,6 +421,18 @@ mesh = SubResource("BoxMesh_7mkxc")
 [node name="StaticBody3D" type="StaticBody3D" parent="Counter/MeshInstance3D2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Counter/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fi6r7")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Counter/MeshInstance3D2"]
+transform = Transform3D(5.96384, 0, 0, 0, 0.0035779, 0.999994, 0, -0.999994, 0.0035779, -36.869, 0.0306091, 8.1478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Counter/MeshInstance3D2/StaticBody3D2"]
+shape = SubResource("ConcavePolygonShape3D_fi6r7")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Counter/MeshInstance3D2"]
+transform = Transform3D(-0.061203, -0.999941, 0.00357771, 0, 0.0035779, 0.999994, -5.96352, 0.0102623, -3.67176e-05, 7.58345, 0.0306053, -3.15517)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Counter/MeshInstance3D2/StaticBody3D3"]
 shape = SubResource("ConcavePolygonShape3D_fi6r7")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Counter"]
