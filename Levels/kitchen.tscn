@@ -872,9 +872,7 @@ light_cull_mask = 4294966802
 transform = Transform3D(0.465826, 0, 0.384476, 0, 0.604, 0, -0.384476, 0, 0.465826, -22.2833, 0.500001, 5.05319)
 
 [node name="Skeleton3D" parent="leader_squirrel/Armature" index="0"]
-bones/1/rotation = Quaternion(0.0670222, 0.536411, 0.114108, 0.833517)
-bones/2/rotation = Quaternion(-0.00239378, 0.0660255, 0.162785, 0.984447)
-bones/4/rotation = Quaternion(-0.093291, 0.329141, -0.627004, 0.699878)
+bones/2/rotation = Quaternion(-0.00239377, 0.0660255, 0.162785, 0.984447)
 
 [node name="mesh" parent="leader_squirrel/Armature/Skeleton3D" index="0"]
 layers = 2
@@ -894,9 +892,9 @@ bones/2/rotation = Quaternion(-0.00239378, 0.0660255, 0.162785, 0.984447)
 bones/3/rotation = Quaternion(0.419487, -0.0718889, -0.463016, 0.777483)
 bones/4/rotation = Quaternion(-0.093291, 0.329141, -0.627004, 0.699878)
 bones/5/rotation = Quaternion(0.732947, 0.0431837, 0.0858947, 0.673459)
-bones/6/rotation = Quaternion(0.490546, 0.000426779, 0.234921, 0.839152)
+bones/6/rotation = Quaternion(0.490546, 0.000426782, 0.234921, 0.839152)
 bones/7/rotation = Quaternion(0.0617058, 0.00297669, 0.0356746, 0.997452)
-bones/8/rotation = Quaternion(0.139442, -4.77382e-08, 0.0581498, 0.988521)
+bones/8/rotation = Quaternion(0.139442, -4.73868e-08, 0.0581498, 0.988521)
 bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
 bones/10/rotation = Quaternion(-0.403566, -0.24723, -0.379148, 0.795147)
 bones/11/rotation = Quaternion(-0.0813467, -0.000239684, -0.0330587, 0.996137)
@@ -921,9 +919,9 @@ bones/2/rotation = Quaternion(-0.00239378, 0.0660255, 0.162785, 0.984447)
 bones/3/rotation = Quaternion(0.419487, -0.0718889, -0.463016, 0.777483)
 bones/4/rotation = Quaternion(-0.093291, 0.329141, -0.627004, 0.699878)
 bones/5/rotation = Quaternion(0.732947, 0.0431837, 0.0858947, 0.673459)
-bones/6/rotation = Quaternion(0.490546, 0.000426779, 0.234921, 0.839152)
+bones/6/rotation = Quaternion(0.490546, 0.000426782, 0.234921, 0.839152)
 bones/7/rotation = Quaternion(0.0617058, 0.00297669, 0.0356746, 0.997452)
-bones/8/rotation = Quaternion(0.139442, -4.77382e-08, 0.0581498, 0.988521)
+bones/8/rotation = Quaternion(0.139442, -4.73868e-08, 0.0581498, 0.988521)
 bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
 bones/10/rotation = Quaternion(-0.403566, -0.24723, -0.379148, 0.795147)
 bones/11/rotation = Quaternion(-0.0813467, -0.000239684, -0.0330587, 0.996137)
@@ -1018,15 +1016,15 @@ shape = SubResource("BoxShape3D_e46oi")
 mesh = SubResource("BoxMesh_frae5")
 
 [node name="SquirrelRoomShadow" parent="Shadows" instance=ExtResource("20_26rbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.9048, 0, 0)
 
 [node name="Area3D" parent="Shadows/SquirrelRoomShadow" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203, 0.653, 4.849)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50955, 0.653, -0.331248)
 
 [node name="CollisionShape3D" parent="Shadows/SquirrelRoomShadow/Area3D" index="0"]
 shape = SubResource("BoxShape3D_d85mk")
 
 [node name="MeshInstance3D" parent="Shadows/SquirrelRoomShadow/Area3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6035, 1.06618, -5.21895)
 mesh = SubResource("BoxMesh_bpion")
 
 [node name="Door1Shadow" parent="Shadows" instance=ExtResource("20_26rbk")]
