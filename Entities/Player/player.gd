@@ -16,28 +16,35 @@ var closest_pushable: Pushable = null
 
 var pushing: Pushable = null
 var pushing_position: Vector3 = Vector3.ZERO
+var pushing_collision: CollisionShape3D = null
 
 
 func _process(_delta):
-    if Input.is_action_just_pressed("push"):
+    if Input.is_action_just_pressed("push") and is_on_floor():
         if not pushing:
             if closest_pushable:
                 pushing = closest_pushable
                 closest_pushable.reparent(self)
-                pushing.set_collision_layer_value(3, false)
+                pushing_collision = pushing.collision_shape.duplicate()
+                add_child(pushing_collision)
+                pushing.collision_shape.disabled = true
                 pushing_position = pushing.position
                 $hamster_walk_2/AnimationTree.set("parameters/conditions/pushing", true)
                 $hamster_walk_2/AnimationTree.set("parameters/conditions/not_pushing", false)
         else:
             $hamster_walk_2/AnimationTree.set("parameters/conditions/pushing", false)
             $hamster_walk_2/AnimationTree.set("parameters/conditions/not_pushing", true)
-            pushing.set_collision_layer_value(3, true)
             pushing_position = Vector3.ZERO
+            pushing.collision_shape.disabled = false
+            pushing.start_freeze()
+            pushing_collision.queue_free()
+            pushing_collision = null
             pushing.reparent(get_parent())
             pushing = null
     
     if pushing:
         pushing.position = pushing_position
+        pushing_collision.position = pushing_position
 
 
 func _physics_process(delta):
@@ -46,7 +53,7 @@ func _physics_process(delta):
         velocity.y -= gravity * delta
 
     # Handle Jump.
-    if Input.is_action_just_pressed("jump") and is_on_floor():
+    if Input.is_action_just_pressed("jump") and is_on_floor() and not pushing:
         velocity.y = JUMP_VELOCITY
 
     # Get the input direction and handle the movement/deceleration.
@@ -72,8 +79,8 @@ func _physics_process(delta):
         local_speed = SPEED
     
     if direction:
-        velocity.x = direction.x
-        velocity.z = direction.z
+        velocity.x = direction.x * local_speed
+        velocity.z = direction.z * local_speed
         
         if pushing:
             if look_direction.x == 0:
@@ -82,8 +89,6 @@ func _physics_process(delta):
                 velocity.z = 0
         else:
             look_at(Vector3.FORWARD.rotated(Vector3.UP, rotation.y).lerp(direction * -1, ROTATION_SPEED) + position)
-        
-        velocity *= local_speed
     else:
         velocity.x = move_toward(velocity.x, 0, local_speed)
         velocity.z = move_toward(velocity.z, 0, local_speed)
