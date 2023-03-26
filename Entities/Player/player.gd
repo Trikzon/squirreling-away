@@ -7,7 +7,7 @@ extends CharacterBody3D
 const SPEED = 5.0
 const PUSH_SPEED = 2
 const ROTATION_SPEED = 0.1
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 7
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -52,9 +52,15 @@ func _physics_process(delta):
     if not is_on_floor():
         velocity.y -= gravity * delta
 
+    if is_on_floor():
+        $hamster_walk_2/AnimationTree.set("parameters/conditions/jump", false)
+        $hamster_walk_2/AnimationTree.set("parameters/conditions/not_jump", true)
+
     # Handle Jump.
     if Input.is_action_just_pressed("jump") and is_on_floor() and not pushing:
         velocity.y = JUMP_VELOCITY
+        $hamster_walk_2/AnimationTree.set("parameters/conditions/jump", true)
+        $hamster_walk_2/AnimationTree.set("parameters/conditions/not_jump", false)
 
     # Get the input direction and handle the movement/deceleration.
     # As good practice, you should replace UI actions with custom gameplay actions.
