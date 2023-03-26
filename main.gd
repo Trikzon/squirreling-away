@@ -90,7 +90,10 @@ func _on_ui_restart_day():
     start_day()
 
 func _on_win():
-    $UI.enableWinScreen()
+    if day == 5:
+        $UI.enableRealWinScreen()
+    else:
+        $UI.enableWinScreen()
 
 func _on_die():
     $UI.enableGameOverScreen()

@@ -35,6 +35,14 @@ func hideAllScreens():
     $StartScreen.hide()
     $GameOverScreen.hide()
     $WinScreen.hide()
+    
+func enableRealWinScreen():
+    hideAllScreens()
+    $RealWinScreen/Score.text = "
+
+
+[b]                  Score: %s[/b]" % score
+    $RealWinScreen.show()
 
 func _on_dialog_finish_speaking():
     finish_speaking.emit()
