@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3ydehcqugnsc"]
+[gd_scene load_steps=12 format=3 uid="uid://c3ydehcqugnsc"]
 
 [ext_resource type="Script" path="res://Levels/day.gd" id="1_laacl"]
 [ext_resource type="PackedScene" uid="uid://d4c0ytxt47vsi" path="res://Levels/kitchen.tscn" id="2_sg5tk"]
 [ext_resource type="PackedScene" uid="uid://drkdjp0xen7l1" path="res://Entities/Pushable/coffee_cup.tscn" id="3_wq5v5"]
-[ext_resource type="PackedScene" path="res://Entities/Pushable/cereal.tscn" id="4_umepe"]
 [ext_resource type="PackedScene" uid="uid://bnbdoegnx0m4c" path="res://Entities/Static/Meshes/plate.glb" id="5_ddcua"]
 [ext_resource type="PackedScene" uid="uid://qkh4m8nnl2n5" path="res://Entities/Pushable/spray.tscn" id="6_6nut4"]
 [ext_resource type="PackedScene" uid="uid://8p07mwtvtkp4" path="res://Entities/Pushable/blank_can.tscn" id="7_ew4k0"]
@@ -23,9 +22,6 @@ transform = Transform3D(0.698103, 0, -0.715997, 0, 1, 0, 0.715997, 0, 0.698103, 
 
 [node name="Pushable2" parent="." instance=ExtResource("3_wq5v5")]
 transform = Transform3D(0.304715, 0, 0.952444, 0, 1, 0, -0.952444, 0, 0.304715, -4.64024, 1.4096, 6.35951)
-
-[node name="Cereal" parent="." instance=ExtResource("4_umepe")]
-transform = Transform3D(0.012374, 0, -0.999923, 0, 1, 0, 0.999923, 0, 0.012374, 6.06164, 0.5, -4.29833)
 
 [node name="plate2" parent="." instance=ExtResource("5_ddcua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.088, 1.15188, 6.42037)
@@ -68,3 +64,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.4407, 2.23795, 0.259302)
 
 [node name="Radio" parent="." instance=ExtResource("12_deuux")]
 transform = Transform3D(0.543468, 0, 0.83943, 0, 1, 0, -0.83943, 0, 0.543468, -30.1641, 2.17024, 2.35931)
+
+[node name="LabeledCan6" parent="." instance=ExtResource("9_7ygut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.96893, 2.75814, -5.54403)
