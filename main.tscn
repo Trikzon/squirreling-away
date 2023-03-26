@@ -2,19 +2,19 @@
 
 [ext_resource type="PackedScene" uid="uid://bh131xjgippe2" path="res://Levels/dev_level.tscn" id="1_iuhgj"]
 [ext_resource type="Script" path="res://main.gd" id="1_js0ba"]
-[ext_resource type="PackedScene" uid="uid://cx2368v2jrve8" path="res://UI/ui.tscn" id="2_uy05h"]
-[ext_resource type="PackedScene" uid="uid://j261jiswgead" path="res://Levels/Lighting/lighting.tscn" id="4_sbkwd"]
+[ext_resource type="PackedScene" uid="uid://j261jiswgead" path="res://Levels/Lighting/lighting.tscn" id="3_ce4ur"]
+[ext_resource type="PackedScene" uid="uid://cx2368v2jrve8" path="res://UI/ui.tscn" id="3_yldc6"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_js0ba")
 
 [node name="DevLevel" parent="." instance=ExtResource("1_iuhgj")]
 
+[node name="UI" parent="." instance=ExtResource("3_yldc6")]
+
+[node name="Lighting" parent="." instance=ExtResource("3_ce4ur")]
+
 [node name="ScoreTimer" type="Timer" parent="."]
-
-[node name="UI" parent="." instance=ExtResource("2_uy05h")]
-
-[node name="Lighting" parent="." instance=ExtResource("4_sbkwd")]
 
 [connection signal="win" from="DevLevel" to="." method="_on_dev_level_win"]
 [connection signal="timeout" from="ScoreTimer" to="UI" method="_on_score_timer_timeout"]
