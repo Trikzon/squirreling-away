@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 
 @onready var LOOK_DIRECTION: RayCast3D = $LookDirection
@@ -13,6 +14,8 @@ const JUMP_VELOCITY = 8
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var closest_pushable: Pushable = null
+
+var closest_shadow: Area3D = null
 
 var pushing: Pushable = null
 var pushing_position: Vector3 = Vector3.ZERO
@@ -117,3 +120,10 @@ func _on_push_detection_area_body_entered(body):
 func _on_push_detection_area_body_exited(body):
     if body is Pushable and closest_pushable == body:
         closest_pushable = null
+
+func entershadow(body):
+    closest_shadow=body
+    
+func exitshadow(body):
+    if body==closest_shadow:
+        closest_shadow=null

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bh131xjgippe2"]
+[gd_scene load_steps=14 format=3 uid="uid://bh131xjgippe2"]
 
 [ext_resource type="PackedScene" uid="uid://bsq6kupgh27i2" path="res://Entities/Player/player.tscn" id="1_mkk37"]
 [ext_resource type="Script" path="res://Levels/dev_level.gd" id="1_u8lsh"]
@@ -6,12 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://6t75rxue57su" path="res://Entities/Pushable/pushable.tscn" id="3_xrncy"]
 [ext_resource type="PackedScene" uid="uid://b0pxgnxtvjrml" path="res://Zones/WinCod/win_cond.tscn" id="4_e0nx7"]
 [ext_resource type="PackedScene" uid="uid://cokc7hrek652b" path="res://Entities/Player/squirrel.tscn" id="6_cs738"]
-[ext_resource type="PackedScene" uid="uid://bjgs4lviks30u" path="res://Entities/Pushable/meshes/matches.glb" id="7_nno14"]
+[ext_resource type="PackedScene" uid="uid://j261jiswgead" path="res://Levels/Lighting/lighting.tscn" id="7_kq561"]
 [ext_resource type="PackedScene" uid="uid://duishmotm0u5g" path="res://Entities/Pushable/meshes/radio.glb" id="8_lfeyp"]
 [ext_resource type="PackedScene" uid="uid://cnruwm4o3rrqx" path="res://Entities/Pushable/meshes/spray.glb" id="9_wnjvm"]
 [ext_resource type="PackedScene" uid="uid://bki4fkrlbq8ku" path="res://Entities/Player/leader_squirrel.tscn" id="10_j5qw7"]
-[ext_resource type="PackedScene" path="res://Entities/Player/squirrel.tscn" id="6_cs738"]
-[ext_resource type="PackedScene" uid="uid://j261jiswgead" path="res://Levels/Lighting/lighting.tscn" id="7_kq561"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne04s"]
 albedo_color = Color(0.291886, 0.331853, 0.396783, 1)
