@@ -34,22 +34,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.088, 1.15188, 6.42037)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6141, 0.575939, 6.30541)
 
 [node name="PepperSpray" parent="." instance=ExtResource("6_6nut4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8792, 13.9327, 3.00007)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0419, 14.3605, 3.00007)
 
 [node name="Pushable3" parent="." instance=ExtResource("7_ew4k0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7258, 13.6894, 2.21301)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9323, 14.1774, 1.64008)
 
 [node name="LabeledCan" parent="." instance=ExtResource("8_d5i1e")]
-transform = Transform3D(0.834598, 0, -0.55086, 0, 1, 0, 0.55086, 0, 0.834598, 20.6387, 13.626, 2.4149)
+transform = Transform3D(0.834598, 0, -0.55086, 0, 1, 0, 0.55086, 0, 0.834598, 20.8452, 14.114, 1.84197)
 
 [node name="Pushable4" parent="." instance=ExtResource("7_ew4k0")]
-transform = Transform3D(0.888777, 0, 0.458339, 0, 1, 0, -0.458339, 0, 0.888777, 16.324, 13.6894, 0.300185)
+transform = Transform3D(0.888777, 0, 0.458339, 0, 1, 0, -0.458339, 0, 0.888777, 16.5305, 14.1774, -0.272744)
 
 [node name="LabeledCan2" parent="." instance=ExtResource("8_d5i1e")]
-transform = Transform3D(0.994252, 0, -0.107062, 0, 1, 0, 0.107062, 0, 0.994252, 18.1167, 13.626, 0.626009)
+transform = Transform3D(0.994252, 0, -0.107062, 0, 1, 0, 0.107062, 0, 0.994252, 18.3232, 14.114, 0.0530796)
 
 [node name="LabeledCan3" parent="." instance=ExtResource("9_7ygut")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9723, 13.9479, 2.07369)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1788, 14.4359, 1.50076)
 
 [node name="Pushable5" parent="." instance=ExtResource("3_wq5v5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7153, 1.40738, 6.05293)
