@@ -8,7 +8,7 @@ var my_random_number
 # Called when the node enters the scene tree for the first time.
 func _ready():
     $Control.hide()
-    my_random_number = rng.randi_range(5, 15)
+    my_random_number = rng.randi_range(10, 20)
     $RandomTimer.wait_time=my_random_number
     $RandomTimer.start()
     $Spotlight.hide()
@@ -27,7 +27,7 @@ func _on_timer_timeout():
     $InbetweenTimer.start()
         
         
-    my_random_number = rng.randi_range(5, 15)
+    my_random_number = rng.randi_range(10, 20)
     $RandomTimer.wait_time=my_random_number
     $RandomTimer.start()
 

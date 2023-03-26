@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0eh2rc1wc2tm"
-path="res://.godot/imported/Grey_squirrel.png-5eac190e51b644c10fe98ab23b45b292.ctex"
+uid="uid://cyfw7737vpi3h"
+path="res://.godot/imported/leaderfacesmall.png-6ac843a2ada78e4c53c08e7ff5213682.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Assets/File_Grey squirrel.png - Wikimedia Commons_files/Grey_squirrel.png"
-dest_files=["res://.godot/imported/Grey_squirrel.png-5eac190e51b644c10fe98ab23b45b292.ctex"]
+source_file="res://UI/Assets/leaderfacesmall.png"
+dest_files=["res://.godot/imported/leaderfacesmall.png-6ac843a2ada78e4c53c08e7ff5213682.ctex"]
 
 [params]
 

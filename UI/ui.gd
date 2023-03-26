@@ -13,3 +13,18 @@ func _process(delta):
 func _on_score_timer_timeout():
     score+=1
     $ScoreLabel.text = "Score: %s" % score
+    
+func enableStartScreen():
+    $StartScreen.show()
+    $GameOverScreen.hide()
+    $WinScreen.hide()
+    
+func enableGameOverScreen():
+    $StartScreen.hide()
+    $GameOverScreen.show()
+    $WinScreen.hide()
+    
+func enableWinScreen():
+    $StartScreen.hide()
+    $GameOverScreen.hide()
+    $WinScreen.show()

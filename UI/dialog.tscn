@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://UI/dialog.gd" id="1_hw6gy"]
 [ext_resource type="FontFile" uid="uid://b3u35yfgodov6" path="res://Fonts/Montserrat-Medium.ttf" id="2_r71fp"]
 [ext_resource type="Texture2D" uid="uid://bh4iyx36onawj" path="res://UI/Assets/DialougBox.png" id="2_xudd0"]
-[ext_resource type="Texture2D" uid="uid://tb65svyj6j6c" path="res://UI/Assets/Squirrel.png" id="4_2f4t0"]
+[ext_resource type="Texture2D" uid="uid://dwk6xer3nbedb" path="res://UI/Assets/leaderface.png" id="4_2hxml"]
 
 [sub_resource type="Animation" id="Animation_m0cty"]
 length = 0.001
@@ -157,10 +157,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -388.0
-offset_top = 91.0
-offset_right = -182.0
-offset_bottom = 182.0
+offset_left = -531.0
+offset_top = 49.0
+offset_right = -352.0
+offset_bottom = 128.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_xudd0")
@@ -174,8 +174,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
-offset_right = -16.0
+offset_left = 19.0
+offset_top = 5.0
+offset_right = -13.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_r71fp")
@@ -191,10 +193,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -187.0
-offset_top = 121.0
-offset_right = -122.0
-offset_bottom = 182.0
+offset_left = -532.0
+offset_top = -128.0
+offset_right = -352.0
+offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_xudd0")
@@ -205,11 +207,11 @@ patch_margin_bottom = 3
 
 [node name="SquirrelBox" type="TextureRect" parent="NinePatchRect3"]
 layout_mode = 0
-offset_left = 7.0
+offset_left = 5.0
 offset_top = 4.0
-offset_right = 60.0
-offset_bottom = 57.0
-texture = ExtResource("4_2f4t0")
+offset_right = 175.0
+offset_bottom = 176.0
+texture = ExtResource("4_2hxml")
 
 [node name="NinePatchRect4" type="NinePatchRect" parent="."]
 texture_filter = 1
