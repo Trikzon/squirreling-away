@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bokinscjwgif"
-path="res://.godot/imported/coffee_cup.glb-46ece97fdb7ff2d54176d27d2b22172c.scn"
+path="res://.godot/imported/coffee_cup.glb-3eb326d238a8639e3ec17dcd12ab36f1.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/meshes/coffee_cup.glb"
-dest_files=["res://.godot/imported/coffee_cup.glb-46ece97fdb7ff2d54176d27d2b22172c.scn"]
+source_file="res://Entities/Pushable/Meshes/coffee_cup.glb"
+dest_files=["res://.godot/imported/coffee_cup.glb-3eb326d238a8639e3ec17dcd12ab36f1.scn"]
 
 [params]
 

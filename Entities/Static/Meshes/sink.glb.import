@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c3oog7sjik6lw"
-path="res://.godot/imported/sink.glb-af210f51b09971a88556eea4ae14eed3.scn"
+path="res://.godot/imported/sink.glb-2b9d451bf8bc5cb7446d72d9194e776e.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/meshes/sink.glb"
-dest_files=["res://.godot/imported/sink.glb-af210f51b09971a88556eea4ae14eed3.scn"]
+source_file="res://Entities/Static/Meshes/sink.glb"
+dest_files=["res://.godot/imported/sink.glb-2b9d451bf8bc5cb7446d72d9194e776e.scn"]
 
 [params]
 
