@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://40mcf161fu66"
-path="res://.godot/imported/knife.glb-f69a39f1d4d8fa278b017867fa28c440.scn"
+uid="uid://bnbdoegnx0m4c"
+path="res://.godot/imported/plate.glb-a82ead7d11d7e9e89ea9706254a610dd.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/Meshes/knife.glb"
-dest_files=["res://.godot/imported/knife.glb-f69a39f1d4d8fa278b017867fa28c440.scn"]
+source_file="res://Entities/Static/Meshes/plate.glb"
+dest_files=["res://.godot/imported/plate.glb-a82ead7d11d7e9e89ea9706254a610dd.scn"]
 
 [params]
 

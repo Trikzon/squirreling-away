@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjduggubtj132"
-path.etc2="res://.godot/imported/cereal_CEREAL.png-0370158f688b8357e01db090de20045b.etc2.ctex"
+path.etc2="res://.godot/imported/cereal_CEREAL.png-947bbb44009210cc59aa976cbb02ef4d.etc2.ctex"
 metadata={
 "imported_formats": ["etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Entities/Pushable/Meshes/cereal_CEREAL.png"
-dest_files=["res://.godot/imported/cereal_CEREAL.png-0370158f688b8357e01db090de20045b.etc2.ctex"]
+source_file="res://Entities/Pushable/meshes/cereal_CEREAL.png"
+dest_files=["res://.godot/imported/cereal_CEREAL.png-947bbb44009210cc59aa976cbb02ef4d.etc2.ctex"]
 
 [params]
 

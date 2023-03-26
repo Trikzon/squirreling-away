@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://545av7fcsial"
-path="res://.godot/imported/microwave.glb-8bc91a8414adf219da0cabed25924632.scn"
+uid="uid://40mcf161fu66"
+path="res://.godot/imported/knife.glb-03344a9e2c8c4592c83f92ffc760c390.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/Meshes/microwave.glb"
-dest_files=["res://.godot/imported/microwave.glb-8bc91a8414adf219da0cabed25924632.scn"]
+source_file="res://Entities/Static/Meshes/knife.glb"
+dest_files=["res://.godot/imported/knife.glb-03344a9e2c8c4592c83f92ffc760c390.scn"]
 
 [params]
 

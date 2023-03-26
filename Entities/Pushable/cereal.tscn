@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwwmycplvo878"]
+
+[ext_resource type="Script" path="res://Entities/Pushable/pushable.gd" id="1_hie31"]
+[ext_resource type="PackedScene" uid="uid://bemv8v0y1lecn" path="res://Entities/Pushable/meshes/cereal.glb" id="2_0x6vi"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m8pdy"]
+points = PackedVector3Array(0.333333, -1.49012e-08, 0.5, 0.333333, -0.230104, 0.5, 0.333333, -1.49012e-08, -0.5, -0.333333, -1.49012e-08, 0.5, -0.333333, -0.230104, 0.5, 0.333333, -0.230104, -0.5, -0.333333, -1.49012e-08, -0.5, -0.333333, -0.230104, -0.5)
+
+[node name="Cereal" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_hie31")
+
+[node name="cereal" parent="." instance=ExtResource("2_0x6vi")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4.76907, 0, 0, 0, 0, -4.76907, 0, 4.76907, 0, 0.0387403, 2.31302, 0.410425)
+shape = SubResource("ConvexPolygonShape3D_m8pdy")
+
+[node name="FreezeTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="FreezeTimer" to="." method="_on_timer_timeout"]

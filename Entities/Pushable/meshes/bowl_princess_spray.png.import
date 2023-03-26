@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3r6761u2hk10"
-path.etc2="res://.godot/imported/bowl_princess_spray.png-9983b5a45ae0db1cf4dee061d713be09.etc2.ctex"
+path.etc2="res://.godot/imported/bowl_princess_spray.png-72106fa70a541ad3bf3446bdddd747d8.etc2.ctex"
 metadata={
 "imported_formats": ["etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Entities/Pushable/Meshes/bowl_princess_spray.png"
-dest_files=["res://.godot/imported/bowl_princess_spray.png-9983b5a45ae0db1cf4dee061d713be09.etc2.ctex"]
+source_file="res://Entities/Pushable/meshes/bowl_princess_spray.png"
+dest_files=["res://.godot/imported/bowl_princess_spray.png-72106fa70a541ad3bf3446bdddd747d8.etc2.ctex"]
 
 [params]
 

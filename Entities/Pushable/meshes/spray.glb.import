@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cnruwm4o3rrqx"
-path="res://.godot/imported/spray.glb-f5cfeb4669f21c24e066a2656c56d159.scn"
+path="res://.godot/imported/spray.glb-ea5524646df2c39550b591cc266a5b3c.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/Meshes/spray.glb"
-dest_files=["res://.godot/imported/spray.glb-f5cfeb4669f21c24e066a2656c56d159.scn"]
+source_file="res://Entities/Pushable/meshes/spray.glb"
+dest_files=["res://.godot/imported/spray.glb-ea5524646df2c39550b591cc266a5b3c.scn"]
 
 [params]
 

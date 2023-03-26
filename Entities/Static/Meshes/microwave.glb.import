@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://32t6lmwp40ea"
-path="res://.godot/imported/cutting_board.glb-073d6080571c0a337744b4c384c1c5ba.scn"
+uid="uid://545av7fcsial"
+path="res://.godot/imported/microwave.glb-fef637ceb9544f09df52a6a7cf5b2f91.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/Meshes/cutting_board.glb"
-dest_files=["res://.godot/imported/cutting_board.glb-073d6080571c0a337744b4c384c1c5ba.scn"]
+source_file="res://Entities/Static/Meshes/microwave.glb"
+dest_files=["res://.godot/imported/microwave.glb-fef637ceb9544f09df52a6a7cf5b2f91.scn"]
 
 [params]
 

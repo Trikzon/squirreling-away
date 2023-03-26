@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bsq6kupgh27i2" path="res://Entities/Player/player.tscn" id="2_vjd3j"]
 [ext_resource type="Material" uid="uid://86fmvkho5vip" path="res://Levels/cabinet_wood.tres" id="3_klb0f"]
 [ext_resource type="Material" uid="uid://crax53fm62gpd" path="res://Levels/wall.tres" id="4_dxgmi"]
-[ext_resource type="PackedScene" uid="uid://6t75rxue57su" path="res://Entities/Pushable/pushable.tscn" id="4_n7884"]
 [ext_resource type="PackedScene" uid="uid://clkll2fjmiwm" path="res://Levels/camera.tscn" id="6_4g8rn"]
 [ext_resource type="PackedScene" uid="uid://j261jiswgead" path="res://Levels/Lighting/lighting.tscn" id="7_847nl"]
 [ext_resource type="PackedScene" uid="uid://b6xvqqm3260rk" path="res://Entities/Static/blender.tscn" id="9_e63iv"]
@@ -15,9 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://8p07mwtvtkp4" path="res://Entities/Pushable/blank_can.tscn" id="13_lrlr0"]
 [ext_resource type="PackedScene" uid="uid://bki4fkrlbq8ku" path="res://Entities/Player/leader_squirrel.tscn" id="15_up8fo"]
 [ext_resource type="PackedScene" uid="uid://cokc7hrek652b" path="res://Entities/Player/squirrel.tscn" id="16_bj8wv"]
-[ext_resource type="PackedScene" uid="uid://b783c6orbo8ou" path="res://Entities/Pushable/Meshes/candle.glb" id="17_d3182"]
+[ext_resource type="PackedScene" uid="uid://bsbmsypylsgde" path="res://Entities/Static/candle.tscn" id="18_0eqw7"]
 [ext_resource type="PackedScene" uid="uid://cnfmmalqsktpk" path="res://Levels/hideout.glb" id="18_02k5b"]
 [ext_resource type="PackedScene" uid="uid://dhux0b18ltemy" path="res://Levels/posters.glb" id="19_rhak3"]
+[ext_resource type="PackedScene" uid="uid://dl2js6q1fwowj" path="res://Entities/Pushable/jar.tscn" id="19_s3sob"]
 [ext_resource type="Texture2D" uid="uid://kuan6gtslipf" path="res://Levels/posters_poster.png" id="20_63r8b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ry4p0"]
@@ -746,9 +746,6 @@ transform = Transform3D(-0.673452, -2.29433e-17, -0.739232, 3.48787e-16, 1, -3.4
 [node name="Player" parent="." instance=ExtResource("2_vjd3j")]
 transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -26.1747, 2, 1.91057)
 
-[node name="Book" parent="." instance=ExtResource("4_n7884")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76986, 1.6926, 0)
-
 [node name="Lighting" parent="." instance=ExtResource("7_847nl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.4964, 0)
 
@@ -814,8 +811,22 @@ parameters/playback = SubResource("AnimationNodeStateMachinePlayback_pdioe")
 transform = Transform3D(-0.373602, 0, 0.474593, 0, 0.604, 0, -0.474593, 0, -0.373602, -32.2302, 0.570421, -3.75584)
 
 [node name="Skeleton3D" parent="squirrel/Armature" index="0"]
+bones/1/rotation = Quaternion(0.0670222, 0.536411, 0.114108, 0.833517)
+bones/2/rotation = Quaternion(-0.00239378, 0.0660255, 0.162785, 0.984447)
+bones/3/rotation = Quaternion(0.419487, -0.0718889, -0.463016, 0.777483)
+bones/4/rotation = Quaternion(-0.093291, 0.329141, -0.627004, 0.699878)
+bones/5/rotation = Quaternion(0.732947, 0.0431837, 0.0858947, 0.673459)
 bones/6/rotation = Quaternion(0.490546, 0.000426779, 0.234921, 0.839152)
+bones/7/rotation = Quaternion(0.0617058, 0.00297669, 0.0356746, 0.997452)
 bones/8/rotation = Quaternion(0.139442, -4.77382e-08, 0.0581498, 0.988521)
+bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
+bones/10/rotation = Quaternion(-0.403566, -0.24723, -0.379148, 0.795147)
+bones/11/rotation = Quaternion(-0.0813467, -0.000239684, -0.0330587, 0.996137)
+bones/12/rotation = Quaternion(-0.132802, -0.0154302, -0.0720365, 0.988401)
+bones/13/rotation = Quaternion(0.379298, -0.0124702, 0.921156, -0.086306)
+bones/14/rotation = Quaternion(0.576533, 0.385216, -0.564793, 0.447468)
+bones/15/rotation = Quaternion(-0.411877, -0.0707257, 0.908208, 0.0226441)
+bones/16/rotation = Quaternion(0.678195, -0.120342, 0.424293, 0.58783)
 
 [node name="mesh" parent="squirrel/Armature/Skeleton3D" index="0"]
 layers = 2
@@ -827,26 +838,28 @@ parameters/playback = SubResource("AnimationNodeStateMachinePlayback_ars7x")
 transform = Transform3D(0.476483, 0, 0.371186, 0, 0.604, 0, -0.371186, 0, 0.476483, -29.1063, 0.570421, -3.41139)
 
 [node name="Skeleton3D" parent="squirrel2/Armature" index="0"]
+bones/1/rotation = Quaternion(0.0670222, 0.536411, 0.114108, 0.833517)
+bones/2/rotation = Quaternion(-0.00239378, 0.0660255, 0.162785, 0.984447)
+bones/3/rotation = Quaternion(0.419487, -0.0718889, -0.463016, 0.777483)
+bones/4/rotation = Quaternion(-0.093291, 0.329141, -0.627004, 0.699878)
+bones/5/rotation = Quaternion(0.732947, 0.0431837, 0.0858947, 0.673459)
 bones/6/rotation = Quaternion(0.490546, 0.000426779, 0.234921, 0.839152)
+bones/7/rotation = Quaternion(0.0617058, 0.00297669, 0.0356746, 0.997452)
 bones/8/rotation = Quaternion(0.139442, -4.77382e-08, 0.0581498, 0.988521)
+bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
+bones/10/rotation = Quaternion(-0.403566, -0.24723, -0.379148, 0.795147)
+bones/11/rotation = Quaternion(-0.0813467, -0.000239684, -0.0330587, 0.996137)
+bones/12/rotation = Quaternion(-0.132802, -0.0154302, -0.0720365, 0.988401)
+bones/13/rotation = Quaternion(0.379298, -0.0124702, 0.921156, -0.086306)
+bones/14/rotation = Quaternion(0.576533, 0.385216, -0.564793, 0.447468)
+bones/15/rotation = Quaternion(-0.411877, -0.0707257, 0.908208, 0.0226441)
+bones/16/rotation = Quaternion(0.678195, -0.120342, 0.424293, 0.58783)
 
 [node name="mesh" parent="squirrel2/Armature/Skeleton3D" index="0"]
 layers = 2
 
 [node name="AnimationTree" parent="squirrel2" index="2"]
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_kqid5")
-
-[node name="candle" parent="." instance=ExtResource("17_d3182")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2565, 0.682724, 5.93192)
-
-[node name="Icosphere" parent="candle" index="0"]
-layers = 2
-
-[node name="candle2" parent="." instance=ExtResource("17_d3182")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9884, 0.706569, -1.44978)
-
-[node name="Icosphere" parent="candle2" index="0"]
-layers = 2
 
 [node name="hideout" parent="." instance=ExtResource("18_02k5b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299004, 0, 0.0220757)
@@ -882,11 +895,18 @@ transform = Transform3D(-0.00147119, 0, 0.906407, 0, 0.952161, 0, -0.957948, 0, 
 layers = 2
 mesh = SubResource("ArrayMesh_xbt5m")
 
+[node name="Candle" parent="." instance=ExtResource("18_0eqw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2541, 0.767852, 5.83699)
+
+[node name="Candle2" parent="." instance=ExtResource("18_0eqw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9494, 0.934445, -1.36997)
+
+[node name="LabeledCan" parent="." instance=ExtResource("19_s3sob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69715, 2.73646, 4.48757)
+
 [editable path="leader_squirrel"]
 [editable path="squirrel"]
 [editable path="squirrel2"]
-[editable path="candle"]
-[editable path="candle2"]
 [editable path="hideout"]
 [editable path="posters"]
 [editable path="posters2"]

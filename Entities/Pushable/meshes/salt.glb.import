@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://n22lbbkt8ao5"
-path="res://.godot/imported/salt.glb-371d340157c6ab7de3a97f887b495c8a.scn"
+path="res://.godot/imported/salt.glb-a8c2585865b26af8a75ca0cd30fa4cae.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/Meshes/salt.glb"
-dest_files=["res://.godot/imported/salt.glb-371d340157c6ab7de3a97f887b495c8a.scn"]
+source_file="res://Entities/Pushable/meshes/salt.glb"
+dest_files=["res://.godot/imported/salt.glb-a8c2585865b26af8a75ca0cd30fa4cae.scn"]
 
 [params]
 

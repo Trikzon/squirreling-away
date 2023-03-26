@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dubaghlkuhhv4"]
+
+[ext_resource type="Script" path="res://Entities/Pushable/pushable.gd" id="1_0jmax"]
+[ext_resource type="PackedScene" uid="uid://clyv68fy2j1xw" path="res://Entities/Pushable/meshes/hula.glb" id="2_uab6d"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e0sxv"]
+height = 2.5
+
+[node name="Hula" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_0jmax")
+
+[node name="hula" parent="." instance=ExtResource("2_uab6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -1.25, 2.08165e-12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_e0sxv")
+
+[node name="FreezeTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="FreezeTimer" to="." method="_on_timer_timeout"]

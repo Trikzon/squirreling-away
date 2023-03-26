@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b783c6orbo8ou"
-path="res://.godot/imported/candle.glb-8991265f41c12504719e5a9402edf7c5.scn"
+uid="uid://cua2o1j535xwx"
+path="res://.godot/imported/bowl.glb-8bf100e079ab2abf3d7bcb642b5885fa.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/Meshes/candle.glb"
-dest_files=["res://.godot/imported/candle.glb-8991265f41c12504719e5a9402edf7c5.scn"]
+source_file="res://Entities/Static/Meshes/bowl.glb"
+dest_files=["res://.godot/imported/bowl.glb-8bf100e079ab2abf3d7bcb642b5885fa.scn"]
 
 [params]
 
