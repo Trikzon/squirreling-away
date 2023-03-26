@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bemv8v0y1lecn"
-path="res://.godot/imported/cereal.glb-7d9afc477b3496ea8d1fcbedd39ba62e.scn"
+path="res://.godot/imported/cereal.glb-221fb83d0a98620f8a5d4f2a9aead9f7.scn"
 
 [deps]
 
-source_file="res://Entities/Pushable/Meshes/cereal.glb"
-dest_files=["res://.godot/imported/cereal.glb-7d9afc477b3496ea8d1fcbedd39ba62e.scn"]
+source_file="res://Entities/Pushable/meshes/cereal.glb"
+dest_files=["res://.godot/imported/cereal.glb-221fb83d0a98620f8a5d4f2a9aead9f7.scn"]
 
 [params]
 

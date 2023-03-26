@@ -28,19 +28,6 @@ collision_mask = 4
 [node name="hamster_walk_2" parent="." instance=ExtResource("2_gpqi1")]
 transform = Transform3D(-1.35942e-08, 0, 0.311, 0, 0.311, 0, -0.311, 0, -1.35942e-08, 0, -0.972, 0)
 
-[node name="Skeleton3D" parent="hamster_walk_2/Armature" index="0"]
-bones/2/rotation = Quaternion(-0.00239377, 0.0660255, 0.162785, 0.984447)
-bones/5/rotation = Quaternion(0.732947, 0.0431837, 0.0858947, 0.673459)
-bones/6/rotation = Quaternion(0.490546, 0.000426751, 0.234921, 0.839152)
-bones/7/rotation = Quaternion(0.0617058, 0.00297668, 0.0356746, 0.997452)
-bones/8/rotation = Quaternion(0.139442, -4.19095e-08, 0.0581498, 0.988521)
-bones/9/rotation = Quaternion(-0.599134, 0.43021, -0.435081, 0.516393)
-bones/10/rotation = Quaternion(-0.403566, -0.24723, -0.379148, 0.795147)
-bones/11/rotation = Quaternion(-0.0813467, -0.000239681, -0.0330587, 0.996137)
-bones/12/rotation = Quaternion(-0.132802, -0.0154302, -0.0720365, 0.988401)
-bones/13/rotation = Quaternion(0.379298, -0.0124702, 0.921156, -0.086306)
-bones/16/rotation = Quaternion(0.678195, -0.120342, 0.424293, 0.58783)
-
 [node name="AnimationTree" parent="hamster_walk_2" index="2"]
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_yxgu3")
 parameters/walk/TimeScale/scale = 1.0
