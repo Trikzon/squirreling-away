@@ -4,8 +4,8 @@ extends Node
 @onready var DAY_1_TSCN = preload("res://Levels/day_1.tscn")
 @onready var DAY_2_TSCN = preload("res://Levels/day_2.tscn")
 @onready var DAY_3_TSCN = preload("res://Levels/day_3.tscn")
-#@onready var DAY_4_TSCN = preload("res://Levels/day_4.tscn")
-#@onready var DAY_5_TSCN = preload("res://Levels/day_5.tscn")
+@onready var DAY_4_TSCN = preload("res://Levels/day_4.tscn")
+@onready var DAY_5_TSCN = preload("res://Levels/day_5.tscn")
 
 const OBJECTIVE_NAMES: Array[String] = ["", "Apple", "Radio", "PepperSpray", "MatchBox", "HulaGirl"]
 
@@ -45,17 +45,19 @@ func next_day():
 
 func start_day():
     if level_node:
+        level_node.win.disconnect(_on_win)
         level_node.queue_free()
     match day:
         0: level_node = DAY_0_TSCN.instantiate()
         1: level_node = DAY_1_TSCN.instantiate()
         2: level_node = DAY_2_TSCN.instantiate()
         3: level_node = DAY_3_TSCN.instantiate()
-#        4: level_node = DAY_4_TSCN.instantiate()
-#        5: level_node = DAY_5_TSCN.instantiate()
+        4: level_node = DAY_4_TSCN.instantiate()
+        5: level_node = DAY_5_TSCN.instantiate()
         _: print("Error: No level file for day ", day)
     level_node.init(OBJECTIVE_NAMES[day])
     add_child(level_node)
+    level_node.win.connect(_on_win)
     $BeginningPhysicsTimer.start()
 
 
@@ -83,3 +85,6 @@ func _on_ui_next_day():
 
 func _on_ui_restart_day():
     start_day()
+
+func _on_win():
+    $UI.enableWinScreen()
