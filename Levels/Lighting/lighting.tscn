@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://j261jiswgead"]
+[gd_scene load_steps=5 format=3 uid="uid://j261jiswgead"]
 
 [ext_resource type="Script" path="res://Levels/Lighting/lighting.gd" id="1_ikudq"]
+[ext_resource type="Texture2D" uid="uid://bh4iyx36onawj" path="res://UI/Assets/DialougBox.png" id="2_fem2n"]
+[ext_resource type="FontFile" uid="uid://b3u35yfgodov6" path="res://Fonts/Montserrat-Medium.ttf" id="3_p72l0"]
+[ext_resource type="Texture2D" uid="uid://tb65svyj6j6c" path="res://UI/Assets/Squirrel.png" id="4_an0wa"]
 
 [node name="Lighting" type="Node"]
 script = ExtResource("1_ikudq")
@@ -26,6 +29,54 @@ one_shot = true
 [node name="HideTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WarningMessage" type="NinePatchRect" parent="Control"]
+layout_mode = 0
+offset_left = 1762.0
+offset_top = 990.0
+offset_right = 1917.0
+offset_bottom = 1079.0
+texture = ExtResource("2_fem2n")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Label" type="Label" parent="Control/WarningMessage"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 136.0
+offset_bottom = 59.0
+theme_override_fonts/font = ExtResource("3_p72l0")
+theme_override_font_sizes/font_size = 20
+text = "Watch Out!"
+
+[node name="Sqeakers" type="NinePatchRect" parent="Control"]
+layout_mode = 0
+offset_left = 1679.0
+offset_top = 990.0
+offset_right = 1765.0
+offset_bottom = 1079.0
+texture = ExtResource("2_fem2n")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/Sqeakers"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 82.0
+offset_bottom = 85.0
+texture = ExtResource("4_an0wa")
 
 [connection signal="timeout" from="RandomTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="InbetweenTimer" to="." method="_on_inbetween_timer_timeout"]
