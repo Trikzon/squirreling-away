@@ -1,5 +1,5 @@
 # Squirreling Away
-FSU DevLUp Spring 2023 Game Jame Entry [itch.io](https://alectrem.itch.io/squirreling-away)
+DevLUp FSU Spring 2023 Game Jame Entry [itch.io](https://alectrem.itch.io/squirreling-away)
 
 ## Developers
 | Name | Role | GitHub | LinkedIn |
